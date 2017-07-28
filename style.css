@@ -9,22 +9,37 @@ body {
 	font-family: 'Lora', 'Nanum Myeongjo', serif;
 	margin: 20px;
 }
-nav {
-	padding-right: 20px;
-	float: left;
-}
 nav header {
 	text-align: center;
+}
+nav header h1 {
+	font-size: 50px;
+	font-weight: normal;
+	font-variant: small-caps;
+	font-style: oblique;
 }
 nav header h1 a:link, nav header h1 a:link:active, nav header h1 a:link:hover, nav header h1 a:visited, nav header h1 a:visited:active, nav header h1 a:visited:hover {
 	color: black;
 	text-decoration: none;
 }
-h1 {
-	font-size: 50px;
-	font-weight: normal;
-	font-variant: small-caps;
-	font-style: oblique;
+ul > li {
+	margin-bottom: 10px;
+}
+ul > li:last-child {
+	margin-bottom: 0px;
+}
+@media (min-width:600px) {
+	nav {
+		padding-right: 20px;
+		float: left;
+		width: 300px;
+	}
+	#wrapper {
+		overflow: hidden;
+	}
+}
+@media (max-width:599px) {
+	
 }
 article header {
 	padding: 1px;
@@ -36,6 +51,7 @@ article header:after {
 	display: block;
 }
 article header h2 {
+	clear: both;
 	float: left;
 	margin: 0px;
 }
@@ -45,17 +61,11 @@ article header h3 {
 	color: grey;
 	font-weight: normal;
 	font-size: 11px;
-	vertical-align: bottom;
-}
-article section {
-	clear: both;
-}
-article {
-	float: right;
 }
 footer {
 	clear: both;
-	text-align: right;
+	text-align: center;
+	margin-top: 20px;
 }
 a {
 	text-decoration: underline;
