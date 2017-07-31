@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ site.title }}</title>
+</head>
+<body>
+	<nav>
+		<header>
+			<div id="logo">
+				<a href="https://rlj1202.github.io"><table>
+					<tr>
+						<td>빨</td><td>간</td><td>실</td><td>험</td><td>실</td>
+					</tr>
+				</table></a>
+			</div>
+			
+			<p>{{ site.description }}</p>
+			<p>
+				{{ site.email }}
+				</br>
+				<a href="http://redlaboratory.tistory.com/" target="_blank">http://redlaboratory.tistory.com/</a>
+				</br>
+				<a href="https://github.com/rlj1202">https://github.com/rlj1202</a>
+			</p>
+		</header>
+		
+		<h2>카테고리</h2>
+		{% for category in site.categories %}
+			<h3>{{ category | first }}</h3>
+			<!--
+			<ul>
+				{% for posts in category %}
+					{% for post in posts %}
+						<li>{{ post.title }}</li>
+					{% endfor %}
+				{% endfor %}
+			</ul>-->
+		{% endfor %}
+	</nav>
+	<div id="wrapper">
+		{{ content }}
+	</div>
+	<footer>
+		Github.io - Copyright(C) 2017. Jisu Sim(RedLaboratory).
+	</footer>
+<body>
+</html>
