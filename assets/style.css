@@ -48,6 +48,9 @@ nav ul > li {
 nav ul > li:last-child {
 	margin-bottom: 0px;
 }
+nav div#description a {
+	text-decoration: underline #ff4545;
+}
 #wrapper {
 	overflow: hidden;
 }
@@ -58,45 +61,42 @@ nav ul > li:last-child {
 		width: auto;
 	}
 }
-article header {
+div#wrapper article header {
 	padding: 1px;
 	border-bottom: 1px solid #ff4545;
 }
-article header:after {
+div#wrapper article header:after {
 	content: "";
 	clear: both;
 	display: block;
 }
-article header h2 {
+div#wrapper article header h2 {
 	clear: both;
 	float: left;
 	margin: 0px;
 }
-article header h2 a:link, article header h2 a:link:active, article header h2 a:link:hover, article header h2 a:visited, article header h2 a:visited:active, article header h2 a:visited:hover {
-	text-decoration: none;
-	color: black;
-}
-article header h3 {
+div#wrapper article header h3 {
 	margin: 0;
 	float: right;
 	color: grey;
 	font-weight: normal;
 	font-size: 11px;
 }
+div#wrapper article section a {
+	color: #ff4545
+}
+div#wrapper article section h1 {
+	font-size: 25px;
+}
+div#wrapper article section h2 {
+	font-size: 20px;
+}
 footer {
 	clear: both;
 	text-align: center;
 	margin-top: 20px;
 }
-a {
-	text-decoration: underline #ff4545;
-}
-a:link, a:visited {
+a, a:link, a:visited, a:link:hover, a:visited:hover, a:link:active, a:visited:active {
 	color: black;
-}
-a:link:hover, a:visited:hover {
-	color: red;
-}
-a:link:active, a:visited:active {
-	color: blue;
+	text-decoration: none;
 }

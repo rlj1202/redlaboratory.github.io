@@ -19,17 +19,19 @@
 				</table></a>
 			</div>
 			
-			<p>{{ site.description }}</p>
-			<p>
-				{{ site.email }}
-				</br>
-				<a href="http://redlaboratory.tistory.com/" target="_blank">http://redlaboratory.tistory.com/</a>
-				</br>
-				<a href="https://github.com/rlj1202">https://github.com/rlj1202</a>
-			</p>
+			<div id="description">
+				<p>{{ site.description }}</p>
+				<p>
+					{{ site.email }}
+					</br>
+					<a href="http://redlaboratory.tistory.com/" target="_blank">http://redlaboratory.tistory.com/</a>
+					</br>
+					<a href="https://github.com/rlj1202">https://github.com/rlj1202</a>
+				</p>
+			</div>
 		</header>
 		
-		<h2>카테고리</h2>
+		<h2>분류</h2>
 		{% for category0 in site.categories %}
 			{% assign b = false %}
 			{% for post in site.posts %}
