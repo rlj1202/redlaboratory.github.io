@@ -9,6 +9,14 @@ body {
 	font-family: 'Lora', 'Nanum Myeongjo', serif;
 	margin: 20px;
 }
+nav {
+	padding-right: 20px;
+	float: left;
+	width: 300px;
+}
+nav header {
+	text-align: center;
+}
 nav div#logo table {
 	border-collapse: collapse;
 	margin: 50px auto;
@@ -34,19 +42,11 @@ nav div#logo a {
 	color: black;
 	text-decoration: none;
 }
-nav header {
-	text-align: center;
-}
-ul > li {
+nav ul > li {
 	margin-bottom: 10px;
 }
-ul > li:last-child {
+nav ul > li:last-child {
 	margin-bottom: 0px;
-}
-nav {
-	padding-right: 20px;
-	float: left;
-	width: 300px;
 }
 #wrapper {
 	overflow: hidden;
