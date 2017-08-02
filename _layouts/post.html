@@ -2,12 +2,4 @@
 layout: default
 ---
 
-<article>
-	<header>
-		<h2><a href="{{ post.url | relative_url }}">{{ page.title }}</a></h2>
-		<h3>{{ page.date }}</h3>
-	</header>
-	<section>
-		{{ content }}
-	</section>
-</article>
+{% include article.html title=page.title categories=page.categories date=page.date content=content %}

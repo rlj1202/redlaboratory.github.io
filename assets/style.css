@@ -111,13 +111,6 @@ header#main div#categories {
 header#main input#toggle:checked ~ div#categories {
 	max-height: 200px;
 }
-@media (max-width:767px) {
-	header#main {
-		padding: 0;
-		float: none;
-		width: auto;
-	}
-}
 div#wrapper {
 	overflow: hidden;
 }
@@ -166,4 +159,14 @@ footer {
 a, a:link, a:visited, a:link:hover, a:visited:hover, a:link:active, a:visited:active {
 	color: black;
 	text-decoration: none;
+}
+@media (max-width:767px) {/* mobile */
+	div#side_nav {
+		
+	}
+	header#main {
+		padding: 0;
+		float: none;
+		width: auto;
+	}
 }

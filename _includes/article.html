@@ -1,0 +1,10 @@
+<article>
+	<header>
+		<h2 id="title"><a href="{{ post.url | relative_url }}">{{ include.title }}</a></h2>
+		<h3 id="categories">{{ include.categories | join: " > " }}</h3>
+		<h3 id="date">{{ include.date }}</h3>
+	</header>
+	<section>
+		{{ include.content }}
+	</section>
+</article>
