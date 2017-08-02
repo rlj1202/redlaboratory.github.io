@@ -1,8 +1,8 @@
 ---
-layout: post
-title: 한자 오필 입력기 개발 - 완성
+layout:     post
+title:      한자 오필 입력기 개발 - 완성
 categories: programming
-date: 2016-08-03 01:49:00 +9000
+date:       2016-08-03 01:49:00 +0900
 ---
 
 # 한자 오필 입력기

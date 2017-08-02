@@ -8,58 +8,118 @@
 body {
 	font-family: 'Lora', 'Nanum Myeongjo', serif;
 	margin: 20px;
+	padding-bottom: 50px;/* for bottom_bar */
 }
-nav {
+div#bottom_bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	background-color: white;
+	border-top: 1px solid #ff4545;
+	padding: 10px;
+	box-sizing: border-box;
+	box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.15);
+}
+input#side_nav_toggle {
+	display: none;
+}
+div#side_nav_toggle {
+	border-left: 1px solid #ff4545;
+	border-right: 1px solid #ff4545;
+	float:right;
+	height: 20px;
+	padding: 5px;
+	display: table;
+	cursor: pointer;
+}
+div#side_nav_toggle span {
+	padding: 0 10px;
+	display: table-cell;
+	vertical-align:middle;
+	text-align:center;
+	font-weight:bold;
+}
+div#side_nav {
+	position: fixed;
+	height: 100%;
+	box-sizing: border-box;
+	top: 0;
+	left: -325px;
+	width: 320px;
+	box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.15);
+	border-right: 1px solid #ff4545;
+	background: white;
+	transition: left 0.5s ease;
+	padding: 20px;
+}
+input#side_nav_toggle:checked ~ div#side_nav {
+	left: 0;
+}
+header#main {
 	padding-right: 20px;
 	float: left;
 	width: 300px;
-}
-nav header {
 	text-align: center;
 }
-nav div#logo table {
+header#main div#logo table {
 	border-collapse: collapse;
 	margin: 50px auto;
 }
-nav div#logo tr:first-child td, nav div#logo tr:last-child td {
+header#main div#logo tr:first-child td, header#main div#logo tr:last-child td {
 	padding: 2px 0;
 }
-nav div#logo td {
+header#main div#logo td {
 	border: 1px solid #ff4545;
 	font-size: 50px;
 	padding-left: 3px;
 	padding-right: 3px;
 }
-nav div#logo td:first-child {
+header#main div#logo td:first-child {
 	border-left: none;
 	padding-left: 10px;
 }
-nav div#logo td:last-child {
+header#main div#logo td:last-child {
 	border-right: none;
 	padding-right: 10px;
 }
-nav div#logo a {
+header#main div#logo a {
 	color: black;
 	text-decoration: none;
 }
-nav ul > li {
+header#main ul > li {
 	margin-bottom: 10px;
 }
-nav ul > li:last-child {
+header#main ul > li:last-child {
 	margin-bottom: 0px;
 }
-nav div#description a {
+header#main div#description a {
 	text-decoration: underline #ff4545;
 }
-#wrapper {
+header#main input#toggle {
+	display: none;
+}
+header#main label {
+	cursor: pointer;
+}
+header#main div#categories {
+	max-height: 0;
 	overflow: hidden;
+	transition: max-height 0.5s linear;
+}
+header#main input#toggle:checked ~ div#categories {
+	max-height: 200px;
 }
 @media (max-width:767px) {
-	nav {
+	header#main {
 		padding: 0;
 		float: none;
 		width: auto;
 	}
+}
+div#wrapper {
+	overflow: hidden;
 }
 div#wrapper article header {
 	padding: 1px;
@@ -70,17 +130,24 @@ div#wrapper article header:after {
 	clear: both;
 	display: block;
 }
-div#wrapper article header h2 {
+div#wrapper article header h2#title {
 	clear: both;
-	float: left;
 	margin: 0px;
 }
 div#wrapper article header h3 {
-	margin: 0;
-	float: right;
+	margin: 2px 0;
 	color: grey;
 	font-weight: normal;
 	font-size: 11px;
+}
+div#wrapper article header h3#categories {
+	float: left;
+}
+div#wrapper article header h3#date {
+	float: right;
+}
+div#wrapper article section {
+	margin: 1em 0;
 }
 div#wrapper article section a {
 	color: #ff4545
