@@ -136,6 +136,9 @@ div#wrapper article header h3 {
 div#wrapper article header h3#categories {
 	float: left;
 }
+div#wrapper article header h3#categories a {
+	color: grey;
+}
 div#wrapper article header h3#date {
 	float: right;
 }
