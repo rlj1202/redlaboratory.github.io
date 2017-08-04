@@ -173,3 +173,6 @@ a, a:link, a:visited, a:link:hover, a:visited:hover, a:link:active, a:visited:ac
 		width: auto;
 	}
 }
+@media print {/* rules for printers */
+	
+}
