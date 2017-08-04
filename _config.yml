@@ -16,7 +16,7 @@
 title: RedLaboratory
 email: rlj1202@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  컴퓨터 프로그래밍을 좋아하는 사람
+  컴퓨터 프로그래밍 활동에 대한 저의 개인적인 활동들을 포스팅 합니다.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rlj1202.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: KrRedlaboratory

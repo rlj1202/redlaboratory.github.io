@@ -3,18 +3,32 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="google-site-verification" content="hwxGDaLxpQghc5FGfoCrYY_OA9Vxzk2dl2-oZVbHf4g" />
 	<link rel="stylesheet" type="text/css" href="/assets/style.css">
 	
+	<meta name="google-site-verification" content="hwxGDaLxpQghc5FGfoCrYY_OA9Vxzk2dl2-oZVbHf4g" />
+	
+	<!-- Page Information -->
 	{% capture title %}{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
+	{% capture url %}{{ site.url }}{{ page.url }}{% endcapture %}
 	<title>{{ title }}</title>
 	<meta name="description" content="{{ site.description }}">
+	
+	<!-- Open Graph -->
 	<meta property="og:title" content="{{ title }}">
 	<meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}"><!-- article buisness place product profile restaurant website -->
-	<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+	<meta property="og:url" content="{{ url }}">
 	<!-- <meta property="og:image" content=""> -->
-	<link rel="publisher" href="https://plus.google.com/+rlj1202">
-	<!-- deprecated tag. no longer used by google search. use google plus publisher tag instead. <link rel="author" href="{{ site.author }}"> -->
+	
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:site" content="@{{ site.twitter_username }}">
+	<meta name="twitter:title" content="{{ title }}">
+	<meta name="twitter:description" content="{{ site.description }}">
+	<!-- <meta name="twitter:image" content=""> -->
+	
+	<!-- Etc -->
+	<link rel="publisher" href="{{ site.author }}">
+	<link rel="author" href="{{ site.author }}"><!-- deprecated tag. no longer used by google search. use google plus publisher tag instead. -->
 </head>
 <body>
 	<div id="bottom_bar">
