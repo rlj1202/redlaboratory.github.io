@@ -128,11 +128,18 @@ nav a, nav a:link, nav a:visited {
 	}
 	div#wrapper, footer {
 		width: auto;
-		margin: 5px;
+		margin: 0px;
 		box-sizing: border-box;
 	}
-	article {
+	.box {
+		border-radius: 0px;
 		margin: 5px 0;
+	}
+	article {
+		margin: 0;
+	}
+	article iframe, article img {
+		width: 100%;
 	}
 }
 @media print {/* rules for printers */

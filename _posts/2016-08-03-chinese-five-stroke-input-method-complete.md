@@ -28,7 +28,7 @@ date:       2016-08-03 01:49:00 +0900
 
 그럼에도 불구하고 난 이 입력법이 너무 좋다. 너무 매력적이기 때문이다.
 
-![](/assets/screenshot.png){:width="400px"}
+<center><img src="/assets/screenshot.png" width="400px" /></center>
 
 # 프로그램으로 구현하기 까지
 
@@ -72,4 +72,4 @@ Unihan: [http://unicode.org/charts/unihan.html](http://unicode.org/charts/unihan
 
 # 완성
 
-<iframe width="560" height="315" src="//sendvid.com/embed/qgp3760s" frameborder="0" allowfullscreen></iframe>
+<center><iframe width="560" height="315" src="//sendvid.com/embed/qgp3760s" frameborder="0" allowfullscreen></iframe></center>
