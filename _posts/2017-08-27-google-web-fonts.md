@@ -38,22 +38,22 @@ font-family: 'Jeju Hallasan', cursive;
 font-family: 'Nanum Gothic Coding', monospace;
 
 <div style="font-family: 'Noto Sans KR', sans-serif;font-size:36px">
-<p style="font-weight: 100;">
-새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
-</p>
-<p style="font-weight: 300;">
-새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
-</p>
-<p style="font-weight: normal;">
-새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
-</p>
-<p style="font-weight: 500;">
-새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
-</p>
-<p style="font-weight: Bold;">
-새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
-</p>
-<p style="font-weight: 900;">
-새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
-</p>
+	<p style="font-weight: 100;">
+		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
+	</p>
+	<p style="font-weight: 300;">
+		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
+	</p>
+	<p style="font-weight: normal;">
+		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
+	</p>
+	<p style="font-weight: 500;">
+		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
+	</p>
+	<p style="font-weight: Bold;">
+		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
+	</p>
+	<p style="font-weight: 900;">
+		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
+	</p>
 </div>
