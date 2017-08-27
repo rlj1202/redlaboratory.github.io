@@ -118,6 +118,7 @@ nav {
 	right: 15px;
 	top: 65px;
 	padding: 15px;
+	z-index: 3;
 }
 nav h3 {
 	margin: 7px 0;
