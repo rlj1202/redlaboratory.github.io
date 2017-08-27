@@ -4,4 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is "about" page.
+<div class="box">
+	This is "about" page.
+</div>

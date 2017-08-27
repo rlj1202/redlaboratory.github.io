@@ -33,19 +33,23 @@
 </head>
 <body>
 	<header>
-		<img id="lab_bottle_big" src="/assets/lab_bottle_big.png" />
 		<a href="/">rlj1202.github.io</a>
-		<div>
+		<div id="info">
 			<a href="https://github.com/rlj1202"><img src="/assets/github.svg" width="32px" height="32px" /></a>
 			<a href="https://twitter.com/JisooSim"><img src="/assets/twitter.svg"/ width="32px" height="32px" /></a>
 			<div id="description">{{ site.description }}</div>
 			<div id="email">{{ site.email }}</div>
 		</div>
+		<div id="pages">
+			<a href="/about">About</a>
+			<a href="/tags">Tags</a>
+		</div>
 	</header>
 	<div id="wrapper">
+		<img id="lab_bottle_big" src="/assets/lab_bottle_big.png" />
 		{{ content }}
 	</div>
-	<footer class="box">
+	<footer>
 		Github.io - Copyright(C) 2017. Jisu Sim(RedLaboratory).
 	</footer>
 	

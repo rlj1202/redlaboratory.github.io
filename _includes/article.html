@@ -15,7 +15,7 @@
 		<div class="tags">
 			태그: 
 			{% for tag in include.tags %}
-				{{ tag }}
+				<a href="/tags#{{ tag }}">{{ tag }}</a>
 			{% endfor %}
 		</div>
 	{% endif %}

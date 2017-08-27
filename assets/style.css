@@ -17,42 +17,56 @@ header {
 	word-break: break-all;
 	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 }
+header div#pages {
+	font-size: 20px;
+}
+header div#info {
+	font-size: 14px;
+	padding: 15px;
+}
+header div#info img {
+	margin: 0 10px;
+}
+header div#info div#description {
+	padding: 15px;
+}
 a, a:link, a:visited {
 	color: black;
 	text-decoration: none;
 }
-header div#description, header div#email {
-	font-size: 14px;
-}
 img#lab_bottle_big {
 	height:200px;
 	position: absolute;
-	left: 15px;
+	top: 0px;
+	left: -100px;
 	transform: rotate(30deg);
 	filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
 	z-index: 1;
 }
-div#wrapper, footer {
+div#wrapper {
 	width: 750px;
 	margin: 0 auto;
 	box-sizing: border-box;
 	position: relative;
-	z-index: 2;
 }
 footer {
+	background-color: white;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 	text-align: center;
 	font-size: 15px;
-	padding: 5px;
-	margin: 15px auto;
+	padding: 15px;
+	z-index: 2;
 }
 .box {
 	border-radius: 3px;
 	background-color: rgba(255, 255, 255, 0.7);
 	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+	padding: 10px;
+	margin: 15px auto;
+	position: relative;
 }
 article {
-	padding: 10px;
-	margin: 15px 0;
+	z-index: 2;
 }
 article .title {
 	font-size: 25px;
@@ -71,6 +85,11 @@ article .category {
 	margin: 5px;
 	float: right;
 }
+article .tags, article .tags a:visited, article .tags a:link {
+	color: #888888;
+	font-size: 12px;
+	margin: 5px;
+}
 article section {
 	margin: 5px;
 	padding-top: 10px;
@@ -79,18 +98,20 @@ article section {
 	word-break: break-all;
 	/*font-family: 'Nanum Gothic', sans-serif;*/
 }
-article section h1 {
+h1 {
 	font-size: 30px;
+	font-weight: normal;
 	margin: 15px 0;
 }
-article section h2 {
+h2 {
 	font-size: 25px;
+	font-weight: normal;
 	margin: 15px 0;
 }
-article .tags {
-	color: #888888;
-	font-size: 12px;
-	margin: 5px;
+h3 {
+	font-size: 20px;
+	font-weight: normal;
+	margin: 15px 0;
 }
 input#nav_button_toggle {
 	display: none;
@@ -135,10 +156,7 @@ nav a, nav a:link, nav a:visited {
 	color: white;
 }
 @media (max-width:767px) {/* mobile */
-	img#lab_bottle_big {
-		display: none;
-	}
-	div#wrapper, footer {
+	div#wrapper {
 		width: auto;
 		margin: 0px;
 		box-sizing: border-box;
