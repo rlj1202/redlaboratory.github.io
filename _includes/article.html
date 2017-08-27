@@ -1,13 +1,11 @@
-<article>
-	<header>
-		<h2 id="title"><a href="{{ post.url | relative_url }}">{{ include.title }}</a></h2>
-		<h3 id="categories"><a href="/{{ include.categories | join: "/" }}">{{ include.categories | join: " > " }}</a></h3>
-		<h3 id="date">{{ include.date }}</h3>
-	</header>
+<article class="box">
+	<h1 class="title"><a href="{{ post.url | relative_url }}">{{ include.title }}</a></h2>
+	<h2 class="date">{{ include.date }}</h3>
+	<h2 class="category"><a href="/{{ include.categories | join: "/" }}">{{ include.categories | join: " > " }}</a></h3>
 	<section>
 		{% if include.excerpt %}
 			{{ include.excerpt | remove: '<p>' | remove: '</p>' }}
-			<p>...<p>
+			<p>...</p>
 		{% else %}
 			{{ include.content }}
 		{% endif %}

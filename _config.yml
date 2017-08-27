@@ -23,6 +23,8 @@ twitter_username: KrRedlaboratory
 github_username:  rlj1202
 author: "https://plus.google.com/+rlj1202"
 
+excerpt_separator: <!-- more -->
+
 # Build settings
 markdown: kramdown
 # theme: minima

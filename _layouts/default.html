@@ -31,6 +31,61 @@
 	<link rel="author" href="{{ site.author }}"><!-- deprecated tag. no longer used by google search. use google plus publisher tag instead. -->
 </head>
 <body>
+	<header>
+		<img id="lab_bottle_big" src="/assets/lab_bottle_big.png"/>
+		<a href="/">rlj1202.github.io</a>
+		<div>
+			<a href="https://github.com/rlj1202"><img src="/assets/Github-Mark-32px.png"/></a>
+			<a href="https://twitter.com/JisooSim"><img src="/assets/twitter-32px.png"/></a>
+			<div id="description">{{ site.description }}</div>
+			<div id="email">{{ site.email }}</div>
+		</div>
+	</header>
+	<div id="wrapper">
+		{{ content }}
+	</div>
+	<footer class="box">
+		Github.io - Copyright(C) 2017. Jisu Sim(RedLaboratory).
+	</footer>
+	
+	<input id="nav_button_toggle" type="checkbox">
+	<label for="nav_button_toggle">
+		<div id="nav_button">
+			<svg width="50px" height="50px">
+				<rect style="width:25px;height:5px;fill:white;x:12px;y:12px" />
+				<rect style="width:25px;height:5px;fill:white;x:12px;y:22px;" />
+				<rect style="width:25px;height:5px;fill:white;x:12px;y:32px;" />
+			</svg>
+		</div>
+	</label>
+	<nav>
+		{% for category0 in site.categories %}
+			{% assign b = false %}
+			{% for post in site.posts %}
+				{% if post.categories[0] == category0.first %}
+					{% assign b = true %}
+				{% endif %}
+			{% endfor %}
+			{% if b == true %}
+				<h3><a href="/{{ category0 | first }}">{{ category0 | first }}</a></h3>
+				
+				<ul>
+				{% for category1 in site.categories %}
+					{% assign b = false %}
+					{% for post in site.posts %}
+						{% if post.categories[0] == category0.first and post.categories[1] == category1.first %}
+							{% assign b = true %}
+						{% endif %}
+					{% endfor %}
+					{% if b == true%}
+						<li><a href="/{{ category0 | first }}/{{ category1 | first }}">{{ category1 | first }}</a></li>
+					{% endif %}
+				{% endfor %}
+				</ul>
+			{% endif %}
+		{% endfor %}
+	</nav>
+	<!--
 	<div id="bottom_bar">
 		<input id="side_nav_toggle" type="checkbox" >
 		<label for="side_nav_toggle">
@@ -68,33 +123,6 @@
 			</nav>
 		</div>
 	</div>
-	<header id="main">
-		<div id="logo">
-			<a href="/"><table>
-				<tr><td colspan="5"></td></tr>
-				<tr>
-					<td>빨</td><td>간</td><td>실</td><td>험</td><td>실</td>
-				</tr>
-				<tr><td colspan="5"></td></tr>
-			</table></a>
-		</div>
-		
-		<div id="description">
-			<p>{{ site.description }}</p>
-			<p>
-				{{ site.email }}
-				</br>
-				<a href="http://redlaboratory.tistory.com/" target="_blank">http://redlaboratory.tistory.com/</a>
-				</br>
-				<a href="https://github.com/rlj1202">https://github.com/rlj1202</a>
-			</p>
-		</div>
-	</header>
-	<div id="wrapper">
-		{{ content }}
-	</div>
-	<footer>
-		Github.io - Copyright(C) 2017. Jisu Sim(RedLaboratory).
-	</footer>
+	-->
 <body>
 </html>
