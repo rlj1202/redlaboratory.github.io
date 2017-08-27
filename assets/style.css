@@ -112,48 +112,6 @@ h3 {
 	font-weight: normal;
 	margin: 15px 0;
 }
-input#nav_button_toggle {
-	display: none;
-}
-input#nav_button_toggle:checked ~ nav {
-	display: block;
-}
-div#nav_button {
-	width: 50px;
-	height: 50px;
-	position: fixed;
-	right: 15px;
-	top: 15px;
-	background: rgba(0, 0, 0, 0.8);
-	border-radius: 5px;
-	cursor: pointer;
-	z-index: 3;
-}
-nav {
-	display:none;
-	background-color: rgba(0, 0, 0, 0.8);
-	color: white;
-	border-radius: 5px;
-	position: fixed;
-	right: 15px;
-	top: 65px;
-	padding: 15px;
-	z-index: 3;
-}
-nav h3 {
-	margin: 7px 0;
-	font-size: 20px;
-	font-weight: normal;
-}
-nav ul {
-	padding: 0 20px;
-	margin: 7px 0;
-	font-size: 17px;
-	font-weight: normal;
-}
-nav a, nav a:link, nav a:visited {
-	color: white;
-}
 @media (max-width:767px) {/* mobile */
 	div#wrapper {
 		width: auto;
