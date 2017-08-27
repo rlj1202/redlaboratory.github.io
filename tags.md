@@ -1,17 +1,14 @@
 ---
-layout: default
-permalink: /tags/
+layout: page
 ---
 
-<div class="box">
 <center><h1>태그목록</h1></center>
 {% for tag in site.tags %}
-	<h2 id="{{ tag | first }}">{{ tag | first }}</h2>
+<h2 id="{{ tag | first }}">{{ tag | first }}</h2>
 	{% assign tag_posts = tag | last %}
-	<ul>
+<ul>
 	{% for post in tag_posts %}
-		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
+<li><a href="{{ post.url }}">{{ post.title }}</a></li>
 	{% endfor %}
-	</ul>
+</ul>
 {% endfor %}
-</div>
