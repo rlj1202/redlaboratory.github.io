@@ -107,6 +107,7 @@ div#nav_button {
 	background: rgba(0, 0, 0, 0.8);
 	border-radius: 5px;
 	cursor: pointer;
+	z-index: 3;
 }
 nav {
 	display:none;
@@ -132,7 +133,7 @@ nav ul {
 nav a, nav a:link, nav a:visited {
 	color: white;
 }
-@media (max-width:768px) {/* mobile */
+@media (max-width:767px) {/* mobile */
 	img#lab_bottle_big {
 		display: none;
 	}
