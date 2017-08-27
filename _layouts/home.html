@@ -12,7 +12,7 @@ layout: default
 
 {% assign limitation = 5 %}
 {% for post in posts limit:limitation %}
-	{% include article.html title=post.title categories=post.categories date=post.date content=post.content excerpt=post.excerpt %}
+	{% include article.html title=post.title categories=post.categories date=post.date content=post.content excerpt=post.excerpt tags=post.tags %}
 {% endfor %}
 
 {% assign remains = posts.size | minus: limitation %}

@@ -5,9 +5,18 @@
 	<section>
 		{% if include.excerpt %}
 			{{ include.excerpt | remove: '<p>' | remove: '</p>' }}
-			<p>...</p>
+			<p><a href="{{ post.url | relative_url }}">...</a></p>
 		{% else %}
 			{{ include.content }}
 		{% endif %}
 	</section>
+	{% assign tagSize = include.tags.size %}
+		{% if tagSize > 0 %}
+		<div class="tags">
+			태그: 
+			{% for tag in include.tags %}
+				{{ tag }}
+			{% endfor %}
+		</div>
+	{% endif %}
 </article>
