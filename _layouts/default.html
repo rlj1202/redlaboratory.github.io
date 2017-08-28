@@ -14,9 +14,10 @@
 	{% capture title %}{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}{% endcapture %}
 	{% capture url %}{{ site.url }}{{ page.url }}{% endcapture %}
 	<title>{{ title }}</title>
-	<meta name="description" content="{{ site.description }}">
+	<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncatewords: 150 }}{% else %}{{ site.description }}{% endif %}">
 	
 	<!-- Open Graph -->
+	<!-- <meta property="og:site_name" content="rlj1202.github.io"> -->
 	<meta property="og:title" content="{{ title }}">
 	<meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}"><!-- article buisness place product profile restaurant website -->
 	<meta property="og:url" content="{{ url }}">
@@ -34,7 +35,7 @@
 	<link rel="author" href="{{ site.author }}"><!-- deprecated tag. no longer used by google search. use google plus publisher tag instead. -->
 </head>
 <body>
-	<header>
+	<header id="main_header">
 		<a href="/">rlj1202.github.io</a>
 		<div id="info">
 			<a href="https://github.com/rlj1202"><img src="/assets/github.svg" width="32px" height="32px" /></a>

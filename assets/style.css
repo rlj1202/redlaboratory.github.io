@@ -9,7 +9,7 @@ body {
 	margin: 0;
 	font-family: 'Hanna', serif;
 }
-header {
+header#main_header {
 	background-color: white;
 	text-align: center;
 	font-size: 50px;
@@ -17,17 +17,17 @@ header {
 	word-break: break-all;
 	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 }
-header div#pages {
+header#main_header div#pages {
 	font-size: 20px;
 }
-header div#info {
+header#main_header div#info {
 	font-size: 14px;
 	padding: 15px;
 }
-header div#info img {
+header#main_header div#info img {
 	margin: 0 10px;
 }
-header div#info div#description {
+header#main_header div#info div#description {
 	padding: 15px;
 }
 a, a:link, a:visited {
@@ -84,15 +84,24 @@ article .category {
 	margin: 5px;
 	float: right;
 }
-article .tags, article .tags a:visited, article .tags a:link {
+article .tag {
+	margin: 5px;
+	clear: both;
+	float: left;
+}
+article .tag, article .tag a:visited, article .tag a:link {
 	color: #888888;
 	font-size: 12px;
-	margin: 5px;
+	display: inline;
+}
+article header::after {
+	content: "";
+	clear: both;
+	display: block;
 }
 article section {
 	margin: 5px;
-	padding-top: 10px;
-	clear: both;
+	padding-top: 5px;
 	font-family: 'Noto Sans KR', sans-serif;
 	word-break: break-all;
 	/*font-family: 'Nanum Gothic', sans-serif;*/
@@ -116,14 +125,13 @@ h3 {
 	div#wrapper {
 		width: auto;
 		margin: 0px;
-		box-sizing: border-box;
+	}
+	img#lab_bottle_big {
+		left: -50px;
 	}
 	.box {
 		border-radius: 0px;
 		margin: 5px 0;
-	}
-	article {
-		margin: 0;
 	}
 	article iframe, article img {
 		width: 100%;

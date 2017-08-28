@@ -1,22 +1,21 @@
 <article class="box">
-	<h1 class="title"><a href="{{ post.url | relative_url }}">{{ include.title }}</a></h2>
-	<h2 class="date">{{ include.date }}</h3>
-	<h2 class="category"><a href="/{{ include.categories | join: "/" }}">{{ include.categories | join: " > " }}</a></h3>
+	<header>
+		<h1 class="title"><a href="{{ post.url | relative_url }}">{{ include.title }}</a></h1>
+		<h2 class="date">{{ include.date }}</h2>
+		<h2 class="category"><a href="/{{ include.categories | join: "/" }}">{{ include.categories | join: " > " }}</a></h2>
+		{% assign tagSize = include.tags.size %}
+			{% if tagSize > 0 %}
+			{% for tag in include.tags %}
+				<h2 class="tag"><a href="/tags#{{ tag }}">{{ tag }}</a></h2>
+			{% endfor %}
+		{% endif %}
+	</header>
 	<section>
 		{% if include.excerpt %}
-			{{ include.excerpt | remove: '<p>' | remove: '</p>' }}
+			{{ include.excerpt }}
 			<p><a href="{{ post.url | relative_url }}">...</a></p>
 		{% else %}
 			{{ include.content }}
 		{% endif %}
 	</section>
-	{% assign tagSize = include.tags.size %}
-		{% if tagSize > 0 %}
-		<div class="tags">
-			태그: 
-			{% for tag in include.tags %}
-				<a href="/tags#{{ tag }}">{{ tag }}</a>
-			{% endfor %}
-		</div>
-	{% endif %}
 </article>
