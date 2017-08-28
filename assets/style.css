@@ -132,17 +132,18 @@ h3 {
 code {
 	font-family: Consolas, monaco, monospace;
 	font-weight: 700;
+	white-space: pre-wrap;
 }
-code.highlighter-rouge, figure.highlight {
+code.highlighter-rouge, .highlight {
 	background: rgba(0, 0, 0, 0.15);
 	border-radius: 2px;
 }
-figure.highlight {
+.highlight {
 	margin: 16px 0;
-}
-figure.highlight pre {
-	margin: 0;
 	padding: 10px;
+}
+.highlight * {
+	margin: 0;
 }
 code.language-ruby span.k {
 	color: #ff4545;

@@ -6,39 +6,70 @@ tags:       html
 date:       2017-08-27 17:27:00 +0900
 ---
 
-    @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
-    font-family: 'Nanum Pen Script', cursive;
+## 나눔 손글씨
+```
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+font-family: 'Nanum Pen Script', cursive;
+```
 
-    @import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
-    font-family: 'Jeju Gothic', sans-serif;
+## 제주 고딕
+```
+@import url(//fonts.googleapis.com/earlyaccess/jejugothic.css);
+font-family: 'Jeju Gothic', sans-serif;
+```
 
-    @import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
-    font-family: 'Jeju Myeongjo', serif;
+## 제주 명조
+```
+@import url(//fonts.googleapis.com/earlyaccess/jejumyeongjo.css);
+font-family: 'Jeju Myeongjo', serif;
+```
 
 <!-- more -->
 
-    @import url(//fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
-    font-family: 'Nanum Brush Script', cursive;
+## 나눔 붓글씨
+```
+@import url(//fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+font-family: 'Nanum Brush Script', cursive;
+```
 
-    @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-    font-family: 'Noto Sans KR', sans-serif;
+## Nato Sans KR
+```
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+font-family: 'Noto Sans KR', sans-serif;
+```
 
-    @import url(//fonts.googleapis.com/earlyaccess/hanna.css);
-    font-family: 'Hanna', sans-serif;
+## 한나체
+```
+@import url(//fonts.googleapis.com/earlyaccess/hanna.css);
+font-family: 'Hanna', sans-serif;
+```
 
-    @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
-    font-family: 'Nanum Gothic', sans-serif;
+## 나눔 고딕
+```
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+font-family: 'Nanum Gothic', sans-serif;
+```
 
-    @import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
-    font-family: 'Nanum Myeongjo', serif;
+## 나눔 명조
+```
+@import url(//fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+font-family: 'Nanum Myeongjo', serif;
+```
 
-    @import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css);
-    font-family: 'Jeju Hallasan', cursive;
+## 제주 한라산
+```
+@import url(//fonts.googleapis.com/earlyaccess/jejuhallasan.css);
+font-family: 'Jeju Hallasan', cursive;
+```
 
-    @import url(//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
-    font-family: 'Nanum Gothic Coding', monospace;
+## 나눔 고딕 코딩
+```
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+font-family: 'Nanum Gothic Coding', monospace;
+```
 
-<div style="font-family: 'Noto Sans KR', sans-serif;font-size:36px">
+## Nato Sans KR 예시
+<div style="font-family: 'Noto Sans KR', sans-serif;font-size:36px;text-align: center;">
 	<p style="font-weight: 100;">
 		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
 	</p>
