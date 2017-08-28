@@ -7,15 +7,29 @@ layout: default
 	{% assign category = page.categories[last_index] %}
 	{% assign posts = site.categories[category] %}
 {% else %}
-	{% assign posts = site.posts %}
+	{% assign posts = paginator.posts %}
 {% endif %}
 
-{% assign limitation = 5 %}
-{% for post in posts limit:limitation %}
+{% for post in posts %}
 	{% include article.html title=post.title categories=post.categories date=post.date content=post.content excerpt=post.excerpt tags=post.tags %}
 {% endfor %}
 
-{% assign remains = posts.size | minus: limitation %}
-{% if remains > 0 %}
-<div class="box">{{ remains }} more posts....</div>
+{% if paginator %}
+<div class="box">
+	<center>
+	{% if paginator.previous_page %}
+		<a href="{{ paginator.previous_page_path }}">Prev</a>
+	{% else %}
+		Prev
+	{% endif %}
+	
+	{{ paginator.page }} / {{ paginator.total_pages }}
+	
+	{% if paginator.next_page %}
+		<a href="{{ paginator.next_page_path}}">Next</a>
+	{% else %}
+		Next
+	{% endif %}
+	</center>
+</div>
 {% endif %}

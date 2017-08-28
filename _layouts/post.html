@@ -3,3 +3,17 @@ layout: default
 ---
 
 {% include article.html title=page.title categories=page.categories date=page.date content=content tags=page.tags %}
+<div class="box">
+	<div class="prev_next">
+		{% if page.previous %}
+		<div class="prev">
+			<a href="{{ page.previous.url }}">prev</a>
+		</div>
+		{% endif %}
+		{% if page.next %}
+		<div class="next">
+			<a href="{{ page.next.url }}">next</a>
+		</div>
+		{% endif %}
+	</div>
+</div>
