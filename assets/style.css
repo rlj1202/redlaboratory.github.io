@@ -160,6 +160,7 @@ div#leave_comment button {
 	margin: 5px 0;
 	cursor: pointer;
 	float: right;
+	border-radius: 2px;
 }
 div#leave_comment button:hover {
 	background: rgba(0, 0, 0, 0.5);
