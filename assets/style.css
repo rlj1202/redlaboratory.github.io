@@ -125,6 +125,58 @@ div.prev {
 div.next {
 	float: right;
 }
+div#comments .comment {
+	margin: 10px 0;
+}
+div#comments .name, div#comments .date, div#comments .message {
+	margin: 5px;
+}
+div#comments .name {
+	font-size: 16px;
+}
+div#comments .date {
+	font-size: 12px;
+}
+div#comments .message {
+	font-family: 'Noto Sans KR', sans-serif;
+}
+div#comments hr {
+	border: 1px solid rgba(0, 0, 0, 0.15);
+}
+div#leave_comment form {
+	padding: 5px;
+	/*box-sizing: border-box;*/
+}
+div#leave_comment form::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+div#leave_comment button {
+	font-family: 'Hanna', serif;
+	background: rgba(0, 0, 0, 0.15);
+	border: 0;
+	padding: 5px 10px;
+	margin: 5px 0;
+	cursor: pointer;
+	float: right;
+}
+div#leave_comment button:hover {
+	background: rgba(0, 0, 0, 0.5);
+}
+div#leave_comment textarea, div#leave_comment input, div#leave_comment span {
+	padding: 5px;
+	margin: 5px 0;
+	min-width: 100%;
+	max-width: 100%;
+	display: block;
+	box-sizing: border-box;
+}
+div#leave_comment textarea, div#leave_comment input {
+	border-radius: 2px;
+	border: 0;
+	background: rgba(0, 0, 0, 0.15);
+}
 h1 {
 	font-size: 30px;
 	font-weight: normal;
@@ -179,7 +231,7 @@ code.language-ruby span.c1 {
 		margin: 0px;
 	}
 	img#lab_bottle_big {
-		left: -50px;
+		left: -75px;
 	}
 	.box {
 		border-radius: 0px;

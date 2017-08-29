@@ -4,6 +4,43 @@ layout: default
 
 {% include article.html title=page.title categories=page.categories date=page.date content=content tags=page.tags %}
 <div class="box">
+	<div id="comments">
+		{% if site.data.comments[page.slug] %}
+			{% for comment_hash in site.data.comments[page.slug] %}
+				{% assign comment = comment_hash[1] %}
+				<div class="comment">
+					<div class="name">{% if comment.url %}<a href="{{ comment.url }}">{{ comment.name }}</a>{% else %}{{ comment.name }}{% endif %}</div>
+					<div class="date">{{ comment.date | date: "%Y-%m-%d %H:%M:%S" }}</div>
+					<div class="message">{{ comment.message }}</div>
+				</div>
+				{% unless forloop.last %}
+				<hr>
+				{% endunless %}
+			{% endfor %}
+		{% else %}
+			<center>No comments yet.</center>
+		{% endif %}
+	</div>
+</div>
+<div class="box">
+	<div id="leave_comment">
+		<form method="POST" action="https://api.staticman.net/v2/entry/rlj1202/rlj1202.github.io/master/comments">
+			<input name="options[redirect]" type="hidden" value="{{ page.url }}">
+			<input name="options[slug]" type="hidden" value="{{ page.slug }}">
+			<span>Name</span>
+			<input name="fields[name]" type="text">
+			<span>E-mail(optional)</span>
+			<input name="fields[email]" type="email">
+			<span>URL(optional)</span>
+			<input name="fields[url]" type="url">
+			<span>Message</span>
+			<textarea name="fields[message]"></textarea>
+			
+			<button type="submit">comment</button>
+		</form>
+	</div>
+</div>
+<div class="box">
 	<div class="prev_next">
 		{% if page.previous %}
 		<div class="prev">
