@@ -185,7 +185,12 @@ h2 {
 	margin: 15px 0;
 }
 h3 {
-	font-size: 15px;
+	font-size: 17px;
+	font-weight: normal;
+	margin: 15px 0;
+}
+h4 {
+	font-size: 13px;
 	font-weight: normal;
 	margin: 15px 0;
 }
@@ -200,7 +205,7 @@ code.highlighter-rouge, .highlight {
 .highlight {
 	margin: 16px 0;
 	padding: 10px;
-	overflow: scroll;
+	overflow-x: auto;
 }
 .highlight * {
 	margin: 0;
@@ -211,6 +216,7 @@ blockquote {
 	padding-left: 15px;
 	border-left: 5px solid rgba(0, 0, 0, 0.15);
 	border-radius: 2px;
+	color: #999999;
 }
 hr {
 	border: 1px solid rgba(0, 0, 0, 0.15);

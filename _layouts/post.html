@@ -4,7 +4,8 @@ layout: default
 
 {% include article.html title=page.title categories=page.categories date=page.date content=content tags=page.tags %}
 {% if site.data.comments[page.slug] %}
-	{% for comment_hash in site.data.comments[page.slug] %}
+	{% assign comments = site.data.comments[page.slug] | sort %}
+	{% for comment_hash in comments %}
 		{% assign comment = comment_hash[1] %}
 		<div class="box comment">
 			<div class="name">{% if comment.url %}<a href="{{ comment.url }}">{{ comment.name }}</a>{% else %}{{ comment.name }}{% endif %}</div>
