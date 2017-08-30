@@ -9,7 +9,7 @@ layout: default
 		<div class="box comment">
 			<div class="name">{% if comment.url %}<a href="{{ comment.url }}">{{ comment.name }}</a>{% else %}{{ comment.name }}{% endif %}</div>
 			<div class="date">{{ comment.date | date: "%Y-%m-%d %H:%M:%S" }}</div>
-			<div class="message">{{ comment.message }}</div>
+			<div class="message">{{ comment.message | markdownify }}</div>
 		</div>
 	{% endfor %}
 {% else %}
@@ -22,14 +22,14 @@ layout: default
 		<form method="POST" action="https://api.staticman.net/v2/entry/rlj1202/rlj1202.github.io/master/comments">
 			<input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
 			<input name="options[slug]" type="hidden" value="{{ page.slug }}">
-			<span>Name</span>
-			<input name="fields[name]" type="text">
-			<span>E-mail(optional)</span>
+			<label>Name<span class="red">*</span></label>
+			<input name="fields[name]" type="text" required>
+			<label>E-mail(optional)</label>
 			<input name="fields[email]" type="email">
-			<span>URL(optional)</span>
+			<label>URL(optional)</label>
 			<input name="fields[url]" type="url">
-			<span>Message</span>
-			<textarea name="fields[message]" rows="10" placeholder="Leave a comment"></textarea>
+			<label>Message<span class="red">*</span></label>
+			<textarea name="fields[message]" rows="10" placeholder="Leave a comment" required spellcheck="true"></textarea>
 			
 			<button type="submit">comment</button>
 		</form>
