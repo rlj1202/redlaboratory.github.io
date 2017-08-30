@@ -3,29 +3,24 @@ layout: default
 ---
 
 {% include article.html title=page.title categories=page.categories date=page.date content=content tags=page.tags %}
-<div class="box">
-	<div id="comments">
-		{% if site.data.comments[page.slug] %}
-			{% for comment_hash in site.data.comments[page.slug] %}
-				{% assign comment = comment_hash[1] %}
-				<div class="comment">
-					<div class="name">{% if comment.url %}<a href="{{ comment.url }}">{{ comment.name }}</a>{% else %}{{ comment.name }}{% endif %}</div>
-					<div class="date">{{ comment.date | date: "%Y-%m-%d %H:%M:%S" }}</div>
-					<div class="message">{{ comment.message }}</div>
-				</div>
-				{% unless forloop.last %}
-				<hr>
-				{% endunless %}
-			{% endfor %}
-		{% else %}
-			<center>No comments yet.</center>
-		{% endif %}
+{% if site.data.comments[page.slug] %}
+	{% for comment_hash in site.data.comments[page.slug] %}
+		{% assign comment = comment_hash[1] %}
+		<div class="box comment">
+			<div class="name">{% if comment.url %}<a href="{{ comment.url }}">{{ comment.name }}</a>{% else %}{{ comment.name }}{% endif %}</div>
+			<div class="date">{{ comment.date | date: "%Y-%m-%d %H:%M:%S" }}</div>
+			<div class="message">{{ comment.message }}</div>
+		</div>
+	{% endfor %}
+{% else %}
+	<div class="box">
+		<center>No comments yet.</center>
 	</div>
-</div>
+{% endif %}
 <div class="box">
 	<div id="leave_comment">
 		<form method="POST" action="https://api.staticman.net/v2/entry/rlj1202/rlj1202.github.io/master/comments">
-			<input name="options[redirect]" type="hidden" value="{{ page.url }}">
+			<input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
 			<input name="options[slug]" type="hidden" value="{{ page.slug }}">
 			<span>Name</span>
 			<input name="fields[name]" type="text">
@@ -34,7 +29,7 @@ layout: default
 			<span>URL(optional)</span>
 			<input name="fields[url]" type="url">
 			<span>Message</span>
-			<textarea name="fields[message]"></textarea>
+			<textarea name="fields[message]" rows="10" placeholder="Leave a comment"></textarea>
 			
 			<button type="submit">comment</button>
 		</form>

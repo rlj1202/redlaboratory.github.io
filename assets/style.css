@@ -8,13 +8,14 @@ body {
 	background-size: 100px 100px;
 	margin: 0;
 	font-family: 'Hanna', serif;
+	font-size: 16px;
+	word-break: break-all;
 }
 header#main_header {
 	background-color: white;
 	text-align: center;
 	font-size: 50px;
 	padding: 15px;
-	word-break: break-all;
 	box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
 }
 header#main_header div#pages {
@@ -103,13 +104,15 @@ article section {
 	margin: 5px;
 	padding-top: 5px;
 	font-family: 'Noto Sans KR', sans-serif;
-	word-break: break-all;
 }
 article section center {
 	margin: 16px 0;
 }
 article section img {
 	border-radius: 2px;
+}
+article iframe, article img {
+	max-width: 100%;
 }
 article section a, article section a:link, article section a:visited {
 	color: #4545ff;
@@ -125,23 +128,17 @@ div.prev {
 div.next {
 	float: right;
 }
-div#comments .comment {
-	margin: 10px 0;
-}
-div#comments .name, div#comments .date, div#comments .message {
+div.comment .name, div.comment .date, div.comment .message {
 	margin: 5px;
 }
-div#comments .name {
+div.comment .name {
 	font-size: 16px;
 }
-div#comments .date {
+div.comment .date {
 	font-size: 12px;
 }
-div#comments .message {
+div.comment .message {
 	font-family: 'Noto Sans KR', sans-serif;
-}
-div#comments hr {
-	border: 1px solid rgba(0, 0, 0, 0.15);
 }
 div#leave_comment form {
 	padding: 5px;
@@ -196,7 +193,6 @@ h3 {
 code {
 	font-family: Consolas, monaco, monospace;
 	font-weight: 700;
-	white-space: pre-wrap;
 }
 code.highlighter-rouge, .highlight {
 	background: rgba(0, 0, 0, 0.15);
@@ -205,6 +201,7 @@ code.highlighter-rouge, .highlight {
 .highlight {
 	margin: 16px 0;
 	padding: 10px;
+	overflow: scroll;
 }
 .highlight * {
 	margin: 0;
@@ -237,9 +234,6 @@ code.language-ruby span.c1 {
 	.box {
 		border-radius: 0px;
 		margin: 5px 0;
-	}
-	article iframe, article img {
-		width: 100%;
 	}
 }
 @media print {/* rules for printers */
