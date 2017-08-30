@@ -12,4 +12,4 @@ tags:       PutOutAFire
 
 여튼 앞으로는 Graphics 를 자주 이용해야 겠습니다 :)
 
-<center><iframe title="게임 개발 일지 - 7.움직이는 이미지와 렌더링 메소드 변경" width="640" height="360" src="http://kakaotv.daum.net/embed/player/cliplink/60313171?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>
+<center><iframe title="게임 개발 일지 - 7.움직이는 이미지와 렌더링 메소드 변경" width="640" height="360" src="https://kakaotv.daum.net/embed/player/cliplink/60313171?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>

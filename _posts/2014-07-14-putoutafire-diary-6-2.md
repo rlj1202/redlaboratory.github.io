@@ -13,4 +13,4 @@ tags:       PutOutAFire
 
 여튼 완성해 놓으니 기분이 좋군요!!!!!!!<img src="http://i1.daumcdn.net/mimg/mypeople/sticker/edit/sticker_330.png" alt="굿보이">
 
-<center><iframe title="게임 개발 일지 - 6-2.시야 가시 또는 빛 그림자 렌더링 (완성)" width="640" height="360" src="http://kakaotv.daum.net/embed/player/cliplink/60282993?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>
+<center><iframe title="게임 개발 일지 - 6-2.시야 가시 또는 빛 그림자 렌더링 (완성)" width="640" height="360" src="https://kakaotv.daum.net/embed/player/cliplink/60282993?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>

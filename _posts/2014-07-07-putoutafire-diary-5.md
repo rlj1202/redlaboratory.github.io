@@ -11,4 +11,4 @@ tags:       PutOutAFire
 이제 좀더 게임같은 모습이 된것같아 기분이 좋네요.
 <img src="http://i1.daumcdn.net/mimg/mypeople/sticker/edit/sticker_374.png" alt="신나2" style="font-size: 9pt; line-height: 1.5;">
 
-<center><iframe title="게임 개발 일지 - 5.엔티티와 벽 충돌!" width="640" height="360" src="http://kakaotv.daum.net/embed/player/cliplink/60094099?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>
+<center><iframe title="게임 개발 일지 - 5.엔티티와 벽 충돌!" width="640" height="360" src="https://kakaotv.daum.net/embed/player/cliplink/60094099?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>

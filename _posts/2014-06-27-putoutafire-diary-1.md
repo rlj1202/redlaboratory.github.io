@@ -14,4 +14,4 @@ date: 2014-06-27 20:09:00 +0900
 
 여튼 지금까지 만든 게임 영상을 올려보도록 하겠습니다.
 
-<center><iframe title="게임 개발 일지 - 1.메인 메뉴와 맵 렌더링" width="640" height="360" src="http://kakaotv.daum.net/embed/player/cliplink/59821106?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>
+<center><iframe title="게임 개발 일지 - 1.메인 메뉴와 맵 렌더링" width="640" height="360" src="https://kakaotv.daum.net/embed/player/cliplink/59821106?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>

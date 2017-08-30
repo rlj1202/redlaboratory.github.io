@@ -17,4 +17,4 @@ InputHandler 라는 클래스에서 입력에 대한 모든 정보를 받고, �
 ( 오 오 점점 발전하고 있따 )
 ( fps 를 타이틀바 쪽에 표시되도록 바꿈 )
 
-<center><iframe title="게임 개발 일지 - 3.플레이어 입력 받기 및 이동!!" width="640" height="360" src="http://kakaotv.daum.net/embed/player/cliplink/59951256?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>
+<center><iframe title="게임 개발 일지 - 3.플레이어 입력 받기 및 이동!!" width="640" height="360" src="https://kakaotv.daum.net/embed/player/cliplink/59951256?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>

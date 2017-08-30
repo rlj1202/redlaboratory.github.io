@@ -14,4 +14,4 @@ tags:       PutOutAFire
 
 최대 fps 를 120 로 설정해 놓고 그 차이를 비교해 보았다.( 오늘또한 악뮤 노래가... )
 
-<center><iframe title="게임 개발 일지 - 4.렌더링 방법 전환..." width="640" height="360" src="http://kakaotv.daum.net/embed/player/cliplink/60026035?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>
+<center><iframe title="게임 개발 일지 - 4.렌더링 방법 전환..." width="640" height="360" src="https://kakaotv.daum.net/embed/player/cliplink/60026035?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>

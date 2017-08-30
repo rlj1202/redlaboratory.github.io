@@ -13,7 +13,7 @@ tags:       PutOutAFire
 
 엔티티 추가는 정말 재밌습니다 :) 다만, 엔티티의 위치는 엔티티의 가장 왼쪽 위가 기준이므로 나중에 이것이 문제가 될지는 모르겠습니다. 단위 통일했으니 별 문제는 없으려냐? ... 여튼 동영상!
 
-<center><iframe title="게임 개발 일지 - 2.맵 렌더링 알고리즘 변경 및 엔티티 추가 및 단위 통일" width="640" height="360" src="http://kakaotv.daum.net/embed/player/cliplink/59897857?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>
+<center><iframe title="게임 개발 일지 - 2.맵 렌더링 알고리즘 변경 및 엔티티 추가 및 단위 통일" width="640" height="360" src="https://kakaotv.daum.net/embed/player/cliplink/59897857?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>
 
 ※ 개발 일지 마다 악뮤 노래가 들어가 있는데, 제가 동영상 촬영할때 맨날 악뮤 노래 틀어놓고 찍는지라~ ㅋㅋㅋ ※
 ※ 그러니까 제가 임의로 삽입한게 아니라 제가 듣고있었다는점~ 이해해 주세요~ ※

@@ -12,4 +12,4 @@ tags:       PutOutAFire
 
 이 글을 보시는 분중 해결방법 아시는 분좀 꼭 댓글로..ㅠ.ㅠ
 
-<center><iframe title="게임 개발 일지 - 6-1.시야 가시 또는 빛 그림자 렌더링" width="640" height="360" src="http://kakaotv.daum.net/embed/player/cliplink/60202340?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>
+<center><iframe title="게임 개발 일지 - 6-1.시야 가시 또는 빛 그림자 렌더링" width="640" height="360" src="https://kakaotv.daum.net/embed/player/cliplink/60202340?service=daum_tistory" allowfullscreen frameborder="0" scrolling="no"></iframe></center>
