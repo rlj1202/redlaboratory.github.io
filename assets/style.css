@@ -112,6 +112,9 @@ article section iframe, article section img {
 article section a, article section a:link, article section a:visited {
 	color: #4545ff;
 }
+article .mjx-full-width {
+	padding: 16px 0;
+}
 div.prev_next::after {
 	content: "";
 	display: block;
