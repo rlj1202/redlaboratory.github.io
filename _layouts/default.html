@@ -38,7 +38,21 @@
 	<!-- MathJax -->
 	<script type="text/x-mathjax-config">
 		MathJax.Hub.Config({
-			tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+			extensions: ["tex2jax.js"],
+			jax: ["input/TeX", "output/HTML-CSS"],
+			tex2jax: {
+				inlineMath: [ ['$','$'], ['\\(','\\)'] ],
+				displayMath: [ ['$$','$$'], ['\\[','\\]'] ],
+				processEscapes: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+			},
+			"HTML-CSS": {
+				styles: {
+					".MathJax": {
+						"font-size": "13px"
+					}
+				}
+			}
 		});
 	</script>
 	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
@@ -56,7 +70,7 @@
 			<a href="/about">About</a>
 			<a href="/tags">Tags</a>
 			<a href="/categories">Categories</a>
-			<a href="/archive">Archive</a>
+			<a href="/archives">Archives</a>
 		</div>
 	</header>
 	<div id="wrapper">

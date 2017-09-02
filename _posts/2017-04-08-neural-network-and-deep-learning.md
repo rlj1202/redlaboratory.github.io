@@ -15,18 +15,18 @@ tags:       NeuralNetworksAndDeepLearning
 * [이 책이 다루고 있는 것][book_about]
 * [제 1장 - 손으로 쓴 숫자를 인식하는 뉴런 네트워크 사용하기][chap1]
   * [퍼셉트론][perceptrons]
-  * 시그모이드 뉴런
-  * 뉴런 네트워크의 구조
-  * 손으로 쓴 숫자를 구분하기 위한 간단한 네트워크
-  * 기울기 하강 알고리즘으로 학습
-  * 숫자들을 판별하기 위한 네트워크 구현하기
-  * 딥러닝을 향해
-* 제 2장 - 역전파 알고리즘이 어떻게 작동하는가
-  * 준비운동: 뉴런 네트워크로 부터의 결과를 계산하기 위한 빠른 행렬 기반 접근 방법
-  * 비용함수에 대해 필요한 두 가지 추정
-  * 하다마드 곱
-  * 역전파에 대한 네 가지 중요한 공식
-* 제 3장 - 뉴런 네트워크가 학습하는 방법 향상하기
+  * [시그모이드 뉴런][sigmoid]
+  * [뉴런 네트워크의 구조][architecture]
+  * [손으로 쓴 숫자를 구분하기 위한 간단한 네트워크][simple_network]
+  * [기울기 하강 알고리즘으로 학습][gradient_descent]
+  * [숫자들을 판별하기 위한 네트워크 구현하기][implementing_network]
+  * [딥러닝을 향해][toward_deep_learning]
+* [제 2장 - 역전파 알고리즘이 어떻게 작동하는가][chap2]
+  * [준비운동: 뉴런 네트워크로 부터의 결과를 계산하기 위한 빠른 행렬 기반 접근 방법][warm_up]
+  * [비용함수에 대해 필요한 두 가지 추정][two_assumptions]
+  * [하다마드 곱][hadamard]
+  * [역전파에 대한 네 가지 중요한 공식][four_equations]
+* [제 3장 - 뉴런 네트워크가 학습하는 방법 향상하기][chap3]
   * 교차 엔트로피 비용 함수
   * 과적합과 일반화
   * 가중치 초기화
@@ -72,3 +72,15 @@ tags:       NeuralNetworksAndDeepLearning
 [book_about]: {{ site.baseurl }}{% post_url 2017-04-08-what-this-book-is-about %}
 [chap1]:      {{ site.baseurl }}{% post_url 2017-04-08-neuralnet-chap1-using-neural-nets-to-recognize-handwritten-digits %}
 [perceptrons]: {{ site.baseurl }}{% post_url 2017-04-08-perceptrons %}
+[sigmoid]: {{ site.baseurl }}{% post_url 2017-04-08-sigmoid-neurons %}
+[architecture]: {{ site.baseurl }}{% post_url 2017-04-09-the-architecture-of-neural-networks %}
+[simple_network]: {{ site.baseurl }}{% post_url 2017-04-09-a-simple-network-to-classify-handwritten-digits %}
+[gradient_descent]: {{ site.baseurl }}{% post_url 2017-04-11-learning-with-gradient-descent %}
+[implementing_network]: {{ site.baseurl }}{% post_url 2017-04-15-implementing-our-network-to-classify-digits %}
+[toward_deep_learning]: {{ site.baseurl }}{% post_url 2017-04-18-toward-deep-learning %}
+[chap2]: {{ site.baseurl }}{% post_url 2017-04-18-neuralnet-chap2-how-the-backpropagation-algorithm-works %}
+[warm_up]: {{ site.baseurl }}{% post_url 2017-04-18-warm-up-a-fast-matrix-based-approach-to-computing-the-output-from-a-neural-network %}
+[two_assumptions]: {{ site.baseurl }}{% post_url 2017-04-18-the-two-assumptions-we-need-about-the-cost-function %}
+[hadamard]: {{ site.baseurl }}{% post_url 2017-04-18-the-hadamard-product %}
+[four_equations]: {{ site.baseurl }}{% post_url 2017-04-18-the-four-fundamental-equations-behind-backpropagation %}
+[chap3]: {{ site.baseurl }}{% post_url 2017-05-14-neuralnet-chap3-improving-the-way-neural-networks-learn %}

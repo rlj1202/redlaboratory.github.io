@@ -103,6 +103,7 @@ article section {
 	margin: 5px;
 	padding-top: 5px;
 	font-family: 'Noto Sans KR', sans-serif;
+	overflow-x: auto;
 }
 article section iframe, article section img {
 	max-width: 100%;
@@ -111,9 +112,6 @@ article section iframe, article section img {
 }
 article section a, article section a:link, article section a:visited {
 	color: #4545ff;
-}
-article .mjx-full-width {
-	padding: 16px 0;
 }
 div.prev_next::after {
 	content: "";
@@ -198,7 +196,7 @@ h4 {
 }
 code {
 	font-family: Consolas, monaco, monospace;
-	font-weight: 700;
+	font-weight: 600;
 }
 code.highlighter-rouge, .highlight {
 	background: rgba(0, 0, 0, 0.15);
