@@ -102,7 +102,7 @@ $$\begin{eqnarray}  v \rightarrow v' = v-\eta \nabla C.\tag{15}\end{eqnarray}$$
 
 어떻게 우리가 뉴런 네트워크를 학습하기 위해 기울기 하강을 적용할 수 있나요? 방법은, 6번 공식에서 비용을 최소화 하는 가중치와 $bias$들을 찾기위해 기울기 하강을 사용하는 것 입니다. 어떻게 이것이 작동하는지 이해하기 위해서, 변수 $v_j$를 가중치와 $bias$로 바꾸어 기울기 하강 업데이트 규칙을 관련지어 봅시다. 다른말로 하면, 이제 함수 $C$는 가중치와 $bias$를 변수로 가지며 기울기 백터 $\nabla C$는 이제 $\partial C/\partial w_k$와 $\partial C/\partial b_l$을 성분으로 가집니다. 이제 다시 기울기 하강 업데이트 규칙을 쓰면 다음과 같습니다.
 
-$$\begin{eqnarray}  w_k &amp; \rightarrow &amp; w_k' = w_k-\eta \frac{\partial C}{\partial w_k} \tag{16}\\  b_l &amp; \rightarrow &amp; b_l' = b_l-\eta \frac{\partial C}{\partial b_l}.\tag{17}\end{eqnarray}$$
+$$\begin{eqnarray}  w_k   \rightarrow   w_k' = w_k-\eta \frac{\partial C}{\partial w_k} \tag{16}\\  b_l   \rightarrow   b_l' = b_l-\eta \frac{\partial C}{\partial b_l}.\tag{17}\end{eqnarray}$$
 
 이 규칙들을 반복적으로 적용시킴으로써 우리는 "계곡의 아래로 구르기"를 할 수 있고 비용함수의 최소를 찾을 수 있습니다. 다른말로, 이는 뉴런 네트워크를 학습하기 위해 사용할 수 있는 규칙입니다.
 
@@ -112,7 +112,7 @@ $$\begin{eqnarray}  w_k &amp; \rightarrow &amp; w_k' = w_k-\eta \frac{\partial C
 
 이 아이디어를 명확히 하자면, 확률적 기울기 하강 알고리즘은 무작위로 $m$개의 학습 데이터를 고르므로써 작동합니다. 무작위로 선택된 학습 데이터들을 소집단(mini-batch)라고 부르고 각 데이터를 $X_1, X_2, ..., X_m$라고 이름붙입니다. 소집단의 크기 $m$은 $\nabla C_{X_j}$의 평균이 $\nabla C_x$의 평균값에 근사치가 되기에 충분히 커야합니다. 이 말은 다음과 같습니다.
 
-$\begin{eqnarray}  \frac{\sum_{j=1}^m \nabla C_{X_{j}}}{m} \approx \frac{\sum_x \nabla C_x}{n} = \nabla C,\tag{18}\end{eqnarray}$$$
+$$\begin{eqnarray}  \frac{\sum_{j=1}^m \nabla C_{X_{j}}}{m} \approx \frac{\sum_x \nabla C_x}{n} = \nabla C,\tag{18}\end{eqnarray}$$
 
 두번째 시그마 합은 모든 학습 데이터에 대한 것 입니다. 좌변을 교체하면 다음과 같습니다.
 
@@ -122,7 +122,7 @@ $$\begin{eqnarray}  \nabla C \approx \frac{1}{m} \sum_{j=1}^m \nabla C_{X_{j}},\
 
 이를 뉴런 네트워크에서의 학습으로 연결시키기 위해서, $w_k$와 $b_l$이 네트워크에서의 가중치와 $bias$를 의미한다고 가정합시다. 확률적 기울기 하강 알고리즘은 학습 데이터의 무작위로 선택된 소집단을 고르고, 그것들을 가지고 학습함으로써 작동합니다.
 
-$$\begin{eqnarray}   w_k &amp; \rightarrow &amp; w_k' = w_k-\frac{\eta}{m}  \sum_j \frac{\partial C_{X_j}}{\partial w_k} \tag{20}\\    b_l &amp; \rightarrow &amp; b_l' = b_l-\frac{\eta}{m}  \sum_j \frac{\partial C_{X_j}}{\partial b_l},\tag{21}\end{eqnarray}$$
+$$\begin{eqnarray}   w_k   \rightarrow   w_k' = w_k-\frac{\eta}{m}  \sum_j \frac{\partial C_{X_j}}{\partial w_k} \tag{20}\\    b_l   \rightarrow   b_l' = b_l-\frac{\eta}{m}  \sum_j \frac{\partial C_{X_j}}{\partial b_l},\tag{21}\end{eqnarray}$$
 
 시그마 합은 현재 소집단에 있는 학습 데이터에 대한 것 입니다. 우리는 또 다른 소집단을 선택한 다음 그것을 가지고 또 학습을 합니다. 그리고 이것을 학습데이터가 바닥날때 까지 반복합니다. 우리는 이 한번의 반복을 세대(epoch)라고 부릅니다. 한 세대가 끝나면 또 한 세대를 반복합니다.
 

@@ -8,7 +8,9 @@ tags:       NeuralNetworksAndDeepLearning
 
 좋습니다, 이제 확률적 기울기 하강 알고리즘과 MNIST 학습 데이터를 이용하여 손글씨를 인식하는 프로그램을 작성하여 봅시다. 우리는 파이썬 2.7로 작성된 단지 74줄의 프로그램을 작성하게 될것입니다! 첫번째로 필요한것은 MNIST 데이터를 가져오는것입니다. 여러분이 git 사용자라면 이 책의 코드 레포지토리를 복사함으로써 데이터를 얻을 수 있습니다.
 
-    git clone https://github.com/mnielsen/neural-networks-and-deep-learning.git
+```
+git clone https://github.com/mnielsen/neural-networks-and-deep-learning.git
+```
 
 여러분이 git 사용자가 아니라면, <a href="https://github.com/mnielsen/neural-networks-and-deep-learning/archive/master.zip" target="_blank" class="tx-link">이곳</a>에서 데이터와 코드를 다운로드할 수 있습니다.
 
@@ -33,7 +35,9 @@ class Network(object):
 
 이 코드에서, sizes 라는 리스트는 각 층의 뉴런 갯수를 가지고 있습니다. 예를들면, 첫번째 층에는 두개의 뉴런, 둘째 층에는 세개의 뉴런, 마지막 층에는 한개의 뉴런이 있는 Network 객체를 만들고자 한다면, 우리는 다음과 같이 코드를 작성할 수 있습니다.
 
-	net = Network([2, 3, 1])
+```python
+net = Network([2, 3, 1])
+```
 
 네트워크의 bias와 가중치들은 Numpy의 np.random.randn 함수로 무작위로 설정됩니다. 이 초기화는 확률적 기울기 하강 알고리즘을 시작하게 될 값을 제공합니다. 후의 장에서는 가중치와 bias를 초기화 하는 더 좋은 방법을 찾게 되겠지만, 지금은 일단 이렇게 하도록 합시다. 이 Network 의 초기화 작업은 첫번째 층이 입력층이라는 가정 하에 이루어집니다. 입력층에서는 가중치와 바이어스가 필요 없기 때문에 입력층을 제외한 나머지 층의 가중치와 바이어스 행렬만을 만듭니다.
 

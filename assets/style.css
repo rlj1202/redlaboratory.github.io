@@ -39,7 +39,7 @@ img#lab_bottle_big {
 	height:200px;
 	position: absolute;
 	top: -25px;
-	left: -90px;
+	left: -75px;
 	transform: rotate(20deg);
 	filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
 	z-index: 1;
@@ -222,32 +222,14 @@ hr {
 	border: 1px solid rgba(0, 0, 0, 0.15);
 	border-radius: 2px;
 }
-code.language-ruby span.k {
-	color: #ff4545;
-}
-code.language-ruby span.nf {
-	color: #900;
-	font-weight: bold;
-}
-code.language-ruby span.nb {
-	color: #0086B3;
-}
-code.language-ruby span.s1 {
-	color: #d14;
-}
-code.language-ruby span.c1 {
-	color: #998;
-	font-style: italic;
-}
 @media (max-width:767px) {/* mobile */
 	div#wrapper {
 		width: auto;
 		margin: 0px;
 	}
-	img#lab_bottle_big {
-		left: -75px;
-	}
 }
 @media print {/* rules for printers */
-	
+	img#lab_bottle_big {
+		display: none;
+	}
 }

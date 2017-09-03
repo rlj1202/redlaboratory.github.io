@@ -5,7 +5,7 @@ date:       2017-04-18 19:57:43 +0900
 categories: 
 tags:       NeuralNetworksAndDeepLearning
 ---
-역전파는 어떻게 네트워크에서의 가중치와 $bias$의 변화가 비용함수를 바꾸는지에 대한 이해에 관한 것 입니다. 궁극적으로, 이는 $\partial C/\partial w^l_{jk}$ 그리고 $\partial C/\partial b^l_j$에 대한 편미분을 계산하는 것을 의미합니다. 그러나 이것을 계산하기 위해서&nbsp;우리는 먼저 $l^{th}$ 층에 있는 $j^{th}$뉴런에서 error 라고 부르는 $\delta^l_j$라는 중간값을 소개하려고 합니다. 역전파는 error $\delta^l_j$를 계산하기 위한 과정을 말해주며 $\delta^l_j$를 $\partial C/\partial w^l_{jk}$와 $\partial C/\partial b^l_j$와 관련지어줍니다.
+역전파는 어떻게 네트워크에서의 가중치와 $bias$의 변화가 비용함수를 바꾸는지에 대한 이해에 관한 것 입니다. 궁극적으로, 이는 $\partial C/\partial w^l_{jk}$ 그리고 $\partial C/\partial b^l_j$에 대한 편미분을 계산하는 것을 의미합니다. 그러나 이것을 계산하기 위해서 우리는 먼저 $l^{th}$ 층에 있는 $j^{th}$뉴런에서 error 라고 부르는 $\delta^l_j$라는 중간값을 소개하려고 합니다. 역전파는 error $\delta^l_j$를 계산하기 위한 과정을 말해주며 $\delta^l_j$를 $\partial C/\partial w^l_{jk}$와 $\partial C/\partial b^l_j$와 관련지어줍니다.
 
 어떻게 error 가 정의되는지 이해하기 위해서, 우래의 네트워크에 악마가 하나 있다고 상상해 봅시다.
 
@@ -19,4 +19,4 @@ $l$층에 있는 $j^{th}$ 뉴런에 악마가 있군요. 뉴런에 입력이 들
 
 이 이야기로부터 영감을 받아, 우리는 $l$ 층의 $j$ 뉴런의 error $\delta^l_j$를 다음과 같이 정의할 수 있습니다.
 
-$$\begin{eqnarray} &nbsp; \delta^l_j \equiv \frac{\partial C}{\partial z^l_j}.\tag{29}\end{eqnarray}$$
+$$\begin{eqnarray}   \delta^l_j \equiv \frac{\partial C}{\partial z^l_j}.\tag{29}\end{eqnarray}$$
