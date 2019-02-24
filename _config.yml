@@ -24,15 +24,15 @@ github_username:  rlj1202
 author: "https://plus.google.com/+rlj1202"
 
 paginate: 5
+paginate_path: "/page/:num/"
+paginate_root: "/"
 
 excerpt_separator: <!-- more -->
 
 # Build settings
 markdown: kramdown
 # theme: minima
-gems:
+plugins:
   - jekyll-feed
   - jekyll-paginate
-exclude:
-  - Gemfile
-  - Gemfile.lock
+  - jekyll-sitemap

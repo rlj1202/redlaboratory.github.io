@@ -1,16 +1,43 @@
-@import url(https://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
-@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
-@import url(https://fonts.googleapis.com/earlyaccess/hanna.css);
-
+html {
+	height: 100%;
+}
 body {
 	background-image: url(/assets/lab.png);
 	background-repeat: repeat;
 	background-size: 100px 100px;
+
 	margin: 0;
-	font-family: 'Hanna', serif;
+	height: 100%;
+
+	font-family: 'Do Hyeon', sans-serif;
 	font-size: 16px;
-	word-break: break-all;
+	/* word-break: break-all; */
 }
+h1 {
+	font-size: 30px;
+	font-weight: normal;
+	margin: 0;
+}
+h2 {
+	font-size: 25px;
+	font-weight: normal;
+	margin: 0;
+}
+h3 {
+	font-size: 17px;
+	font-weight: normal;
+	margin: 0;
+}
+h4 {
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+a, a:link, a:visited {
+	color: black;
+	text-decoration: none;
+}
+
 header#main_header {
 	background-color: white;
 	text-align: center;
@@ -22,7 +49,7 @@ header#main_header div#pages {
 	font-size: 20px;
 }
 header#main_header div#info {
-	font-size: 14px;
+	font-size: 17px;
 	padding: 15px;
 }
 header#main_header div#info img {
@@ -30,10 +57,6 @@ header#main_header div#info img {
 }
 header#main_header div#info div#description {
 	padding: 15px;
-}
-a, a:link, a:visited {
-	color: black;
-	text-decoration: none;
 }
 img#lab_bottle_big {
 	height:200px;
@@ -60,37 +83,40 @@ footer {
 	position: relative;
 }
 .box {
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.92);
 	box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-	padding: 10px;
+	padding: 15px;
 	margin: 5px auto;
 	position: relative;
 	z-index: 2;
 }
+.box-component {
+	margin: 5px 0;
+}
 article .title {
 	font-size: 25px;
 	font-weight: normal;
-	margin: 5px;
 }
 article .date {
 	font-size: 12px;
 	font-weight: normal;
-	margin: 5px;
 	float: left;
 }
 article .category {
 	font-size: 12px;
 	font-weight: normal;
-	margin: 5px;
 	float: right;
 }
 article .tag {
-	margin: 5px;
 	clear: both;
 	float: left;
+
+	background-color: #00000055;
+	border-radius: 2px;
+	padding: 1px 3px;
 }
 article .tag, article .tag a:visited, article .tag a:link {
-	color: #888888;
+	color: #ffffffee;
 	font-size: 12px;
 	display: inline;
 }
@@ -100,7 +126,6 @@ article header::after {
 	display: block;
 }
 article section {
-	margin: 5px;
 	padding-top: 5px;
 	font-family: 'Noto Sans KR', sans-serif;
 	overflow-x: auto;
@@ -110,8 +135,15 @@ article section iframe, article section img {
 	margin: 16px 0;
 	border-radius: 2px;
 }
-article section a, article section a:link, article section a:visited {
+section a, section a:link, section a:visited {
 	color: #4545ff;
+}
+.article-content h1,
+.article-content h2 {
+	margin: 0 0 16px 0;
+}
+a.article-more, a.article-more:link, a.article-more:visited {
+	color: black;
 }
 div.prev_next::after {
 	content: "";
@@ -146,7 +178,7 @@ div#leave_comment form::after {
 	clear: both;
 }
 div#leave_comment button {
-	font-family: 'Hanna', serif;
+	font-family: 'Do Hyeon', sans-serif;
 	background: rgba(0, 0, 0, 0.15);
 	border: 0;
 	padding: 5px 10px;
@@ -174,40 +206,22 @@ div#leave_comment textarea, div#leave_comment input {
 	border: 0;
 	background: rgba(0, 0, 0, 0.15);
 }
-h1 {
-	font-size: 30px;
-	font-weight: normal;
-	margin: 15px 0;
-}
-h2 {
-	font-size: 25px;
-	font-weight: normal;
-	margin: 15px 0;
-}
-h3 {
-	font-size: 17px;
-	font-weight: normal;
-	margin: 15px 0;
-}
-h4 {
-	font-size: 13px;
-	font-weight: normal;
-	margin: 15px 0;
-}
 code {
-	font-family: Consolas, monaco, monospace;
+	font-family: "Nanum Gothic Coding", monospace;
 	font-weight: 600;
 }
-code.highlighter-rouge, .highlight {
+.highlighter-rouge {
 	background: rgba(0, 0, 0, 0.15);
 	border-radius: 2px;
+
+	padding: 2px 5px;
 }
-.highlight {
+div.highlighter-rouge {
 	margin: 16px 0;
 	padding: 10px;
 	overflow-x: auto;
 }
-.highlight * {
+.highlighter-rouge * {
 	margin: 0;
 }
 blockquote {

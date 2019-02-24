@@ -1,19 +1,21 @@
 <article class="box">
 	<header>
-		<h1 class="title"><a href="{{ post.url | relative_url }}">{{ include.title }}</a></h1>
-		<h2 class="date">{{ include.date }}</h2>
-		<h2 class="category"><a href="/{{ include.categories | join: "/" }}">{{ include.categories | join: " > " }}</a></h2>
-		{% assign tagSize = include.tags.size %}
+		<h1 class="title box-component"><a href="{{ post.url | relative_url }}">{{ include.title }}</a></h1>
+		<h2 class="date box-component">{{ include.date }}</h2>
+		<h2 class="category box-component"><a href="/{{ include.categories | join: "/" }}">{{ include.categories | join: " > " }}</a></h2>
+		<div class="tags">
+			{% assign tagSize = include.tags.size %}
 			{% if tagSize > 0 %}
-			{% for tag in include.tags %}
-				<h2 class="tag"><a href="/tags#{{ tag }}">{{ tag }}</a></h2>
-			{% endfor %}
-		{% endif %}
+				{% for tag in include.tags %}
+					<h2 class="tag box-component"><a href="/tags#{{ tag }}">#{{ tag }}</a></h2>
+				{% endfor %}
+			{% endif %}
+		<div>
 	</header>
-	<section>
+	<section class="article-content box-component">
 		{% if include.excerpt %}
 			{{ include.excerpt }}
-			<p><a href="{{ post.url | relative_url }}">...</a></p>
+			<p><a class="article-more" href="{{ post.url | relative_url }}">...</a></p>
 		{% else %}
 			{{ include.content }}
 		{% endif %}

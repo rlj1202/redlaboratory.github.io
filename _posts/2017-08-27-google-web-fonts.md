@@ -70,19 +70,21 @@ font-family: 'Nanum Gothic Coding', monospace;
 
 ## Nato Sans KR 예시
 <div style="font-family: 'Noto Sans KR', sans-serif;font-size:36px;text-align: center;">
+<!--
 	<p style="font-weight: 100;">
 		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
 	</p>
 	<p style="font-weight: 300;">
 		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
 	</p>
-	<p style="font-weight: normal;">
+	-->
+	<p style="font-weight: 400;">
 		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
 	</p>
 	<p style="font-weight: 500;">
 		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
 	</p>
-	<p style="font-weight: Bold;">
+	<p style="font-weight: 700;">
 		새〮로〮스〮믈〮여듧〮ᄍᆞᆼ〮ᄅᆞᆯ〮ᄆᆡᇰᄀᆞ〮노니〮
 	</p>
 	<p style="font-weight: 900;">
