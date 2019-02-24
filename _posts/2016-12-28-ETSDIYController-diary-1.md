@@ -59,4 +59,4 @@ vJoy feeder를 작성해서 가짜로 조이스틱의 값을 만들어 주면, �
 가변저항 핀에 전선을 땜질하였다.
 
 [JvJoyInterface-github]:          https://github.com/rlj1202/JvJoyInterface
-[vJoy-site]:                      http://vjoystick.sourceforge.net/site/
+[vJoy-site]:                      https://vjoystick.sourceforge.net/site/

@@ -15,9 +15,9 @@ tags:       NeuralNetworksAndDeepLearning
 이 질문의 목적을 명확히 하기 위해서, 제가 이 장의 초반에 의사결정 모델로써 이야기 하였던 인공 뉴런의 해석으로 돌아가 봅시다. 우리가 아래 보여지는 이미지들이 사람의 얼굴인지 아닌지 구분하고 싶다고 가정해 봅시다.
 
 <div>
-<img src="http://cfile3.uf.tistory.com/image/252EA84758F4DC7B051F2A" height="240" width="180"/>
-<img src="http://cfile9.uf.tistory.com/image/224EDF4758F4DC7C0A6C54" height="233" width="273"/>
-<img src="http://cfile2.uf.tistory.com/image/2441D84758F4DC7C043F55" height="240" width="275"/>
+<img src="https://cfile3.uf.tistory.com/image/252EA84758F4DC7B051F2A" height="240" width="180"/>
+<img src="https://cfile9.uf.tistory.com/image/224EDF4758F4DC7C0A6C54" height="233" width="273"/>
+<img src="https://cfile2.uf.tistory.com/image/2441D84758F4DC7C043F55" height="240" width="275"/>
 </div>
 
 우리는 우리가 손글씨 인식문제를 해결하던 방법대로 이 문제를 해결할 수 있습니다. 이미지의 각 픽셀을 네트워크의 입력으로 넣고, "네, 이것은 얼굴입니다" 또는 "아니요, 이것은 얼굴이 아닙니다" 를 나타내는 하나의 출력 뉴런을 넣으면 됩니다.
@@ -28,11 +28,11 @@ tags:       NeuralNetworksAndDeepLearning
 
 당연히, 이는 힘든 방법이고 많은 정보의 부족으로 인해 판단하기 힘들 수 도 있습니다. 사람이 대머리라면 머리카락이 없을것 입니다. 혹은 얼굴의 부분만을 또는 특정한 각도의 얼굴만을 볼 수도 있습니다. 그렇게 되면 얼굴의 특징들을 집어내기 어렵겠죠. 하지만, 이러한 경험적인 것들은 만약 우리가 뉴런 네트워크로 이런 부분적인 문제를 풀 수 있다면, 작은 문제들에 대한 네트워크를 합침으로써 얼굴 감지를 위한 뉴런 네트워크를 만들 수 있을것이라고 이야기 해 줍니다. 여기 부분적인 네트워크를 의미하는 사각형들이 그려진 가능할만한 구조가 하나 있습니다. 물론 얼굴 감지 문제를 풀기위한 현실적인 접근 방법은 아닙니다. 그보다, 네트워크가 어떻게 움직일지에 대한 직관을 쌓는데 도움을 줄겁니다. 여기 그 구조를 나타낸 그림이 있습니다.
 
-<center><img src="http://cfile6.uf.tistory.com/image/27398A4758F4DF7B013B42" style="max-width:100%;height:auto"  height="409" style="" width="611"/></center>
+<center><img src="https://cfile6.uf.tistory.com/image/27398A4758F4DF7B013B42" style="max-width:100%;height:auto"  height="409" style="" width="611"/></center>
 
 부분적인 네트워크들이 분리될 수 있음이 당연해 보이는군요. 다음과 같은 질문을 생각해 봅시다. "왼쪽 위에 눈이 있나요?" 이는 또 여러가지의 질문들로 쪼개질 수 있습니다. "눈썹이 있나요?", "속눈썹이 있나요?", "홍채가 있나요?", 이런식으로요. 당연히 이러한 질문들은 위치에 대한 정보들도 담고 있어야 합니다. "눈썹이 왼쪽 위에 있고 홍채 위에 있나요?" 이런 질문이죠. "왼쪽 위에 눈이 있나요?"라는 질문에 답하는 네트워크는 이제 다음과 같이 분리될 수 있습니다.
 
-<center><img src="http://cfile23.uf.tistory.com/image/2461F24E58F4E15414474B" style="max-width:100%;height:auto"  height="239" style="" width="597"/></center>
+<center><img src="https://cfile23.uf.tistory.com/image/2461F24E58F4E15414474B" style="max-width:100%;height:auto"  height="239" style="" width="597"/></center>
 
 이러한 질문들은 더 많고 많은 여러 층들을 통해 더욱 더 많이 분리 될 수 있습니다. 궁극적으로, 하나의 픽셀 단위 수준에서 쉽게 답을 할 수 있는 질문들을 답하는 네트워크들을 가지게 될 것입니다. 이러한 질문들은 아마, 예를들면, 이미지에서의 특정한 위치에서의 매우 간단한 모양의 존재 유무에 대한 것이 될겁니다. 이런 질문들은 이미지의 원본 픽셀에 연결된 하나의 뉴런으로 해결될 수 있습니다.
 

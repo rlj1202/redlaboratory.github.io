@@ -54,7 +54,7 @@ date:       2016-08-03 01:49:00 +0900
 
 그 다음에 검색결과에 우리나라 한자 음이 나오면 좋겠다 싶어서 이번에는 그에 대한 데이터베이스를 찾다가 Unihan이라는 것을 알게 되었다.
 
-Unihan: [http://unicode.org/charts/unihan.html](http://unicode.org/charts/unihan.html)
+Unihan: [https://unicode.org/charts/unihan.html](https://unicode.org/charts/unihan.html)
 
 이 프로젝트는 한중일 한자의 대한 데이터를 수집하여 현재 zip파일 형태로 데이터 베이스를 제공하고 있다. 한중일의 한자들중 같은 한자이나, 모양이 다른 한자들에 대해서도 모두 정리해 두었고 일본어 발음, 중국어 발음, 한국어 발음, 광둥어 발음등 발음에 대한 정보도 모두 들어있고 영어로 뜻 또한 들어있다.
 데이터 베이스 중에서도 Unihan_Readings.txt 라는 파일에 kHangul이라는 속성에 한국어 한자 발음에 대한 정보가 들어있다. 이 데이타 베이스도 용량이 방대하기 때문에 이분법적 검색 알고리즘을 사용했다.(거의 만능)

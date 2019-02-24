@@ -18,7 +18,7 @@ tags:       NeuralNetworksAndDeepLearning
 
 앞서 말했듯이, 이 장을 넘기고 슥 지나가고 싶거나 그냥 바로 다음장으로 넘어가고 싶다면, 괜찮습니다. 저는 여러분이 역전파를 알수없는 판도라의 상자와 같이 다루더라도 책의 나머지 부분은 접근하기 쉽도록 작성하였으니까요. 물론 이 장으로 부터의 결론을 다시 언급하게될&nbsp;책의 후반부에는 중요한 요점들이 있습니다. 그러나 그 중요한 요점들에서는 여러분이 모든 이유를 따라가지 못하더라도 주 결론에 대한 이해를 할 수 있어야 합니다.
 
-[david_rumelhart]: http://en.wikipedia.org/wiki/David_Rumelhart
-[hinton]: http://www.cs.toronto.edu/~hinton/
-[ronald_williams]: http://en.wikipedia.org/wiki/Ronald_J._Williams
-[1986_paper]: http://www.nature.com/nature/journal/v323/n6088/pdf/323533a0.pdf
+[david_rumelhart]: https://en.wikipedia.org/wiki/David_Rumelhart
+[hinton]: https://www.cs.toronto.edu/~hinton/
+[ronald_williams]: https://en.wikipedia.org/wiki/Ronald_J._Williams
+[1986_paper]: https://www.nature.com/nature/journal/v323/n6088/pdf/323533a0.pdf

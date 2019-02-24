@@ -8,17 +8,17 @@ tags:       NeuralNetworksAndDeepLearning
 
 뉴런 네트워크에 대해 정의하면서, 다시 손으로 쓴 숫자를 인식하기 위한 문제로 돌아와 봅시다. 우리는 이 문제를 크게 두개의 문제로 나누어 생각할 수 있습니다. 첫째로, 많은 숫자가 포함된 이미지를 여러개의 조각난 이미지로 나누는 것입니다. 각각의 조각난 이미지는 하나의 숫자를 가지고 있습니다. 예를 들어, 다음과 같은 이미지는
 
-<center><img src="http://cfile2.uf.tistory.com/image/227E6F4958E9BE12217489" style="cursor: pointer;max-width:100%;height:auto" onclick="open_img('http://cfile2.uf.tistory.com/original/227E6F4958E9BE12217489')"  height="64" style="width: 312px; height: 64px;" width="312" /></center>
+<center><img src="/assets/neuralnet/digits.png" style="cursor: pointer;max-width:100%;height:auto" onclick="open_img('https://cfile2.uf.tistory.com/original/227E6F4958E9BE12217489')"  height="64" style="width: 312px; height: 64px;" width="312" /></center>
 
 다음과 같이 여섯 개의 이미지로 나누어 질 수 있습니다.
 
-<center><img src="http://cfile6.uf.tistory.com/image/2450825058E9BE2913854C" style="max-width:100%;height:auto"  height="99" width="630"/></center>
+<center><img src="/assets/neuralnet/digits_separate.png" style="max-width:100%;height:auto"  height="99" width="630"/></center>
 
 <!-- more -->
 
 우리와 같은 인간들은 이 분리 문제를 쉽게 해결할 수 있으나, 이를 정확히 나누는 컴퓨터 프로그램에게는 꽤 도전적입니다. 일단 한번 이미지가 분리되고 나면, 프로그램은 각 이미지를 판별해야 합니다. 그래서, 예를 들면, 우리는 위에 있는 이미지중 첫번 째 이미지의 숫자를 판별하는 프로그램을 작성하고자 합니다.
 
-<center><img src="http://cfile21.uf.tistory.com/image/2153E34D58E9BE8721B56C" style="max-width:100%;height:auto"  height="35" width="31"/></center>
+<center><img src="/assets/neuralnet/mnist_first_digit.png" style="max-width:100%;height:auto"  height="35" width="31"/></center>
 
 첫번째 이미지는 위와같이 5가 쓰여진 이미지 입니다.
 
@@ -26,7 +26,7 @@ tags:       NeuralNetworksAndDeepLearning
 
 각각의 숫자를 인식하기 위해서는, 우리는 3층 뉴런 네트워크를 사용해야 합니다.
 
-<center><img src="http://cfile1.uf.tistory.com/image/246BF04858E9C0160B4848" style="max-width:100%;height:auto"  height="447" width="537"/></center>
+<center><img src="/assets/neuralnet/tikz12.png" style="max-width:100%;height:auto"  height="447" width="537"/></center>
 
 네트워크의 입력 레이어는 입력 픽셀들의 변환된 값들을 가지고 있습니다. 다음 차례에서 이야기 하겠지만, 우리의 네트워크를 위한 학습 자료는 $28\times 28$크기의 많은 손글씨 이미지들로 이루어져 있습니다. 그러니 입력 레이어는 $784=28\times 28$크기의 뉴런들을 가지게 될겁니다. 간략하게 나타내기 위해서 저는 위 그림처럼 대부분의 뉴런들을 생략하였습니다. 입력 픽셀들은 흑백값입니다. 0.0은 흰색, 1.0은 검정을 나타냅니다. 0.0 에서 1.0으로 숫자가 증가할 수록 점점 어두워 지는 값을 가지게 됩니다.
 
@@ -38,15 +38,15 @@ tags:       NeuralNetworksAndDeepLearning
 
 왜 우리가 이것을 하는지 이해하기 위해서는, 첫번째 원리로 부터 뉴런 네트워크가 무엇을 하는지에 대해 생각해 보는것이 도움이 됩니다. 우리가 열개의 뉴런을 사용할때의 경우를 생각해 봅시다. 입력된 이미지의 숫자가 0인지 아닌지 결정하는 출력 뉴런들 중 첫번째 뉴런을 한번 봅시다. 이 뉴런은 입력층으로 부터 가져온 정보들에 가중치를 곱하여 의사결정을 내리게 됩니다. 은닉층의 뉴런들의 하는일은 뭔가요? 일단, 그냥 논의를 해보기 위해 은닉층의 첫번째 뉴런이 다음과 같은 이미지가 드러나는지 아닌지 감지한다고 가정해 봅시다.
 
-<center><img src="http://cfile8.uf.tistory.com/image/233D164B58EB9B0E2B73E4" style="cursor: pointer;max-width:100%;height:auto" onclick="open_img('http://cfile8.uf.tistory.com/original/233D164B58EB9B0E2B73E4')"  height="200" original="yes" style="width: 194px; height: 200px;" width="194" /></center>
+<center><img src="/assets/neuralnet/mnist_top_left_feature.png" style="cursor: pointer;max-width:100%;height:auto" onclick="open_img('https://cfile8.uf.tistory.com/original/233D164B58EB9B0E2B73E4')"  height="200" original="yes" style="width: 194px; height: 200px;" width="194" /></center>
 
 이 이미지와 겹치는 픽셀들에 가중치를 무겁게 두고 나머지는 가볍게 둠으로써 이 이미지가 드러나는지 않는지 감지할 수 있습니다. 비슷한 방법으로 은닉층의 두번째, 세번째, 네번째 뉴런이 다음과 같은 이미지가 드러나는지 아닌지 감지한다고 해봅시다.
 
-<center><img src="http://cfile7.uf.tistory.com/image/2726A94B58EB9B0F234576" style="max-width:100%;height:auto"  height="203" width="636"/></center>
+<center><img src="/assets/neuralnet/mnist_other_features.png" style="max-width:100%;height:auto"  height="203" width="636"/></center>
 
-아마 보이시겠지만, 이 네장의 이미지를 모두 겹치면 <a href="http://neuralnetworksanddeeplearning.com/chap1.html#complete_zero" target="_blank" class="tx-link">앞에서 본 숫자 0 이미지</a>가 됩니다.
+아마 보이시겠지만, 이 네장의 이미지를 모두 겹치면 <a href="https://neuralnetworksanddeeplearning.com/chap1.html#complete_zero" target="_blank" class="tx-link">앞에서 본 숫자 0 이미지</a>가 됩니다.
 
-<center><img src="http://cfile22.uf.tistory.com/image/2230F84B58EB9B0F102A5D" style="cursor: pointer;max-width:100%;height:auto" onclick="open_img('http://cfile22.uf.tistory.com/original/2230F84B58EB9B0F102A5D')"  height="200" original="yes" style="width: 199px; height: 200px;" width="199" /></center>
+<center><img src="/assets/neuralnet/mnist_complete_zero.png" style="cursor: pointer;max-width:100%;height:auto" onclick="open_img('https://cfile22.uf.tistory.com/original/2230F84B58EB9B0F102A5D')"  height="200" original="yes" style="width: 199px; height: 200px;" width="199" /></center>
 
 그러므로 이 네개의 뉴런들이 모두 발화할때 우리는 이 숫자가 0이라고 말 할 수 있습니다. 당연히, 이미지가 0이라고 결정짓기 위해 사용하는 근거는 이것만 있지는 않습니다. 우리는 다른 방법으로도 0이라는 숫자를 얻어낼 수 있습니다. 하지만 최소한 이 상황에서는 우리가 입력 이미지가 0이었다고 잘 판단했다 말할 수 있겠군요.
 
@@ -57,4 +57,4 @@ tags:       NeuralNetworksAndDeepLearning
 ### 연습
 위의 삼층 네트워크에 새로운 층을 추가함으로써 숫자의 이진수 표현을 결정할 수 있는 방법이 있습니다. 새로운 층은 전에 있던 출력 층으로 부터 나온 숫자를 아래 나온것 처럼 이진수 표현법으로 변환하는 역할을 합니다. 새 출력 층에 알맞는 가중치들과 $bias$들을 찾아보세요. 첫번째 세개의 층이 세번째 층의 올바른 출력이 이루어 졌을때 그 값이 최소한 0.99가 되고 나머지는 0.01이 되는 층이라고 가정하세요.
 
-<center><img src="http://cfile8.uf.tistory.com/image/247C1D4D58EB9EA82E0397" style="max-width:100%;height:auto"  height="304" width="545"/></center>
+<center><img src="/assets/neuralnet/tikz13.png" style="max-width:100%;height:auto"  height="304" width="545"/></center>

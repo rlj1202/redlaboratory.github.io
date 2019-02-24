@@ -8,7 +8,7 @@ tags:       NeuralNetworksAndDeepLearning
 
 학습 알고리즘은 매우 획기적으로 들립니다. 하지만 어떻게 우리가 뉴런 네트워크를 위한 그런 알고리즘을 창안할 수 있을까요? 우리가 어떤 문제를 풀기위해 학습을 할 퍼셉트론의 네트워크를 가지고 있다고 가정해 봅시다. 예를 들어, 네트워크의 입력값은 손으로 쓴 숫자 이미지를 스캔한 픽셀 데이터 일 것입니다. 그리고 우리는 가중치와 $bias$값들을 조정하여 정확한 숫자의 결과를 내놓는 네트워크를 원할 것 입니다. 어떻게 학습이 이뤄지는지 보기 위하여 우리가 네트워크에서 가중치 또는 $bias$에서 작은 변화를 주었다고 가정해 봅시다. 우리가 원하는 결과는 우리가 가중치 또는 $bias$에 준 작은 변화가 오직 네트워크의 출력값에 원하는 작은 변화가 일어나는 것 입니다. 이런 특징이 학습이 가능토록 하는 부분입니다. 도식으로 우리가 원하는 결과를 그려보았습니다. (당연히 이 네트워크는 손글씨를 인식하기에는 너무 간단합니다!)
 
-<center><img src="http://cfile23.uf.tistory.com/image/252B3E4B58E8ECCF1CD93D" style="max-width:100%;height:auto"  height="270" width="487"/></center>
+<center><img src="/assets/neuralnet/tikz8.png" style="max-width:100%;height:auto"  height="270" width="487"/></center>
 
 만약 우리가 준 작은 변화가 작은 변화만을 준것이 사실이라면, 우리는 이 사실을 우리가 원하는 방향으로 행동하도록 네트워크의 가중치와 bias를 조정하는데 적용할&nbsp;수 있을것입니다. 예를 들어, 우리의 네트워크가 8이 그려진 이미지를 9라고 인식했다고 잘못 학습됬다고 가정하여 봅시다. 우리는 네트워크가 이 이미지가 9라고 더 가깝게 판정하도록 어떻게 가중치와 $bias$에 작은 변화를 줄것인지 알아낼 수 있을것입니다. 이것을 반복하다 보면 결과는 점점 더 좋아질 것 입니다. 이 네트워크는 계속 배우고 있는 것 입니다.
 
@@ -20,7 +20,7 @@ tags:       NeuralNetworksAndDeepLearning
 
 좋습니다, 시그모이드 뉴런이 무엇인지 설명하도록 하지요. 우리는 퍼셉트론을 묘사했던 것 처럼 시그모이드 뉴런을 묘사 하고자 합니다.
 
-<center><img src="http://cfile1.uf.tistory.com/image/27121E4C58E99E39083062" style="max-width:100%;height:auto"  height="138" width="280"/></center>
+<center><img src="/assets/neuralnet/tikz9.png" style="max-width:100%;height:auto"  height="138" width="280"/></center>
 
 퍼셉트론 처럼, 시그모이드 뉴런은 $x_{1}$, $x_{2}$...와 같은 입력을 가지고 있습니다. 하지만 단지 0과 1뿐만이 아닌 0과 1 사이의 그 어떤 실수값이라도 받아들일 수 있습니다. 그래서, 예를 들면, 0.638...과 같은 값도 이 시그모이드 뉴런에서는 유효한 값입니다. 또한 퍼셉트론 처럼, 시그모이드 뉴런 또한 각 입력마다 $w_{1}$, $w_{2}$...와 같은 가중치와 $b$라고 표기하는 $bias$를 가지고 있습니다. 하지만 출력값은 0 이거나 1이 아닙니다. 대신 시그모이드 함수라고 불리는 $\sigma (w\cdot x+b)$의 값을 가집니다. 시그모이드 함수는 다음과 같습니다.
 
@@ -39,7 +39,7 @@ $$\begin{eqnarray} \frac{1}{1+\exp(-\sum_j w_j x_j-b)}.\tag{4}\end{eqnarray}$$
 그렇다면 시그모이드 함수의 수학적 형태는 어떻게 생겼을까요? 어떻게 우리가 그것을 이해할 수 있을까요? 사실, 시그모이드 함수의 수학 식은 중요치 않습니다. 정말 중요한 것은 함수의 그래프 입니다. 여기 아래 바로 그 그래프가 있습니다.
 
 
-<div id="sigmoid_graph"></div><script src="http://d3js.org/d3.v3.min.js"></script><script>
+<div id="sigmoid_graph"></div><script src="https://d3js.org/d3.v3.min.js"></script><script>
 function s(x) {return 1/(1+Math.exp(-x));}
 var m = [40, 120, 50, 120];
 var height = 290 - m[0] - m[2];

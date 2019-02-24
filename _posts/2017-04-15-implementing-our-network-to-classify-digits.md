@@ -18,7 +18,7 @@ git clone https://github.com/mnielsen/neural-networks-and-deep-learning.git
 
 <!-- more -->
 
-저희는 또한 <a href="http://numpy.org/" target="_blank" class="tx-link">Numpy</a> 라고 불리는 빠른 선형 수학을 하기위한 파이썬 라이브러리가 필요합니다. 여러분이 아직 Numpy를 설치하지 않았다면, <a href="http://www.scipy.org/install.html" target="_blank" class="tx-link">여기서</a> 다운로드 받으세요.
+저희는 또한 <a href="https://numpy.org/" target="_blank" class="tx-link">Numpy</a> 라고 불리는 빠른 선형 수학을 하기위한 파이썬 라이브러리가 필요합니다. 여러분이 아직 Numpy를 설치하지 않았다면, <a href="https://www.scipy.org/install.html" target="_blank" class="tx-link">여기서</a> 다운로드 받으세요.
 
 아래에 있는 전체 코드를 보여드리기 전에, 뉴런 네트워크 코드의 핵심적인 특징에 대해서 설명하고자 합니다. 가장 핵심이 되는것은 Network 클래스 입니다. 이는 우리가 뉴런 네트워크를 나타내기 위해 사용합니다. 여기 Network 객체를 초기화 하기 위해 사용할 코드가 있습니다.
 
@@ -458,7 +458,7 @@ def vectorized_result(j):
 
 좀 덜 이상한 기준선을 세워볼까요? 이 극단적인 예시를 한번 들어봅시다: 저희는 이미지가 얼마나 어두운지 볼 것입니다. 예를들어, 2라는 숫자의 이미지는 일반적으로 1이라는 숫자의 이미지 보다는 더 어두울 것입니다. 왜냐하면 더 많은 픽셀들이 검정으로 이루어져 있기 때문입니다.
 
-<center><img src="http://cfile4.uf.tistory.com/image/275F34495961E4CE0F49F1" style="cursor: pointer;max-width:100%;height:auto" onclick="open_img('http://cfile4.uf.tistory.com/original/275F34495961E4CE0F49F1')"  height="150" style="width: 308px; height: 150px;" width="308" /></center>
+<center><img src="/assets/neuralnet/mnist_2_and_1.png" style="cursor: pointer;max-width:100%;height:auto" onclick="open_img('https://cfile4.uf.tistory.com/original/275F34495961E4CE0F49F1')"  height="150" style="width: 308px; height: 150px;" width="308" /></center>
 
 학습 데이터를 사용해서 각 숫자의 어두운 정도의 평균을 계산해 봅시다. 그리고 어떤 이미지가 주어지면, 그 이미지의 어두운 정도를 계산해서, 어떤 평균값에 근접한지 추측하는겁니다. 이는 매우 간단한 과정이며 코드로 짜기 쉽습니다. 그래서 자세한 코드를 보여드리진 않을겁니다. 관심 있으시다면 <a href="https://github.com/mnielsen/neural-networks-and-deep-learning/blob/master/src/mnist_average_darkness.py" target="_blank" class="tx-link">깃허브 레포지토리</a>를 확인해 주세요. 이는 무작위 추측에 비해 엄청난 향상을 가져옵니다. 10,000개 중에 2,225개를 맞출 수 있었으며, 이는 22.25%의 판별률을 가집니다.
 

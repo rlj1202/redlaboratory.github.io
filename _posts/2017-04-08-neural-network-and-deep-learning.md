@@ -6,7 +6,7 @@ categories:
 tags:       NeuralNetworksAndDeepLearning
 ---
 
-이 글의 원문은 [http://neuralnetworksanddeeplearning.com](http://neuralnetworksanddeeplearning.com) 입니다. 이 번역 글은 이 책의 저작자표시-비영리 라이센스를 따릅니다. 또한 이 글 또한 같은 라이센스를 따릅니다.
+이 글의 원문은 [https://neuralnetworksanddeeplearning.com](https://neuralnetworksanddeeplearning.com) 입니다. 이 번역 글은 이 책의 저작자표시-비영리 라이센스를 따릅니다. 또한 이 글 또한 같은 라이센스를 따릅니다.
 
 개인적인 공부(인공지능과 영어)와 정보 공유를 위해 번역을 시작하게 되었으며, 번역과 영어에 미숙하기 때문에 여러 오역등이 있을 수 있으며 오역, 오타 등알 발견했을 때 댓글로 알려주시면 수정하도록 하겠습니다.
 

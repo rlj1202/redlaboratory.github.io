@@ -9,7 +9,7 @@ tags:       NeuralNetworksAndDeepLearning
 
 모호한 방법으로 뉴런 네트워크의 가중치들을 언급하는 한 기호로 부터 시작해 봅시다. 우리는 $w^l_{jk}$라는 기호를 $l^{th}$ 층에 있는 $j^{th}$ 뉴런을 가리키는 $(l-1)^{th}$ 층에 있는 $k^{th}$ 뉴런의 연결을 나타내는데 사용할겁니다. 그래서, 예를 들면, 아래 다이어그램은 네트워크의 세번째 층에 있는 두번째 뉴런을 가리키는 두번째 층의 네번째 뉴런의 연결을 나타냅니다.
 
-<center><img src="http://cfile9.uf.tistory.com/image/2411EE4E58F5E539234CEE" style="max-width:100%;height:auto"  height="243" width="617"/></center>
+<center><img src="/assets/neuralnet/tikz16.png" style="max-width:100%;height:auto"  height="243" width="617"/></center>
 
 <!-- more -->
 
@@ -17,7 +17,7 @@ tags:       NeuralNetworksAndDeepLearning
 
 우리는 네트워크의 bias와 활성화에 대해 비슷한 기호를 사용합니다. 분명히, 우리는 $l^{th}$ 층에 있는 $j^{th}$ 뉴런의 bias 에 대해 $b^l_j$라고 표기합니다. 그리고 $l^{th}$ 층에 있는 $j^{th}$ 뉴런에의 활성화에 대해 $a^l_j$라는 기호를 사용합니다. 다음 그림은 이 기호들의 사용에 대한 예를 보여줍니다.
 
-<center><img src="http://cfile21.uf.tistory.com/image/2223725058F6274D2D344D" style="max-width:100%;height:auto"  height="243" width="298"/></center>
+<center><img src="/assets/neuralnet/tikz17.png" style="max-width:100%;height:auto"  height="243" width="298"/></center>
 
 이 기호들과 함께, $l^{th}$ 층의 $j^{th}$ 뉴런의 활성화 값은 다음 공식에 의해 $a^l_j$는 $(l-1)^{th}$층에 있는 활성화 값들과 관련이 있습니다. (이전 장에서의 4번 공식과 그에 대해 논한 것들과 함께 비교해 보세요)
 

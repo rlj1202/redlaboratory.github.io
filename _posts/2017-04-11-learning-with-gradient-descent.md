@@ -6,11 +6,11 @@ categories:
 tags:       NeuralNetworksAndDeepLearning
 ---
 
-이제 우리는 우리의 뉴런 네트워크를 위한 설계도를 가지고 있습니다. 어떻게 하면 이 네트워크가 숫자를 인식하도록 학습을 할 수 있을까요? 우리에게 필요한 첫번째는 학습 데이터 셋이라고 불리는 데이터 입니다. 우리는 <a href="http://yann.lecun.com/exdb/mnist/" target="_blank" class="tx-link">MNIST 데이터 셋</a>을 사용할 것 입니다. 이는 정확한 분석결과와 함께 손으로 쓰인 수만개의 숫자들을 스캔한 이미지를 가지고 있습니다. MNIST의 이름은 <a href="http://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology" target="_blank" class="tx-link">NIST</a>에 의해 수집된 두개의 데이터 셋을 수정한 별도의 셋이라는 사실로 부터 지어졌습니다. NIST는 United States' National Institute of Standards and Technology의 약자 입니다. 아래 사진은 MNIST로 부터 가져온 몇장의 사진 입니다.
+이제 우리는 우리의 뉴런 네트워크를 위한 설계도를 가지고 있습니다. 어떻게 하면 이 네트워크가 숫자를 인식하도록 학습을 할 수 있을까요? 우리에게 필요한 첫번째는 학습 데이터 셋이라고 불리는 데이터 입니다. 우리는 <a href="https://yann.lecun.com/exdb/mnist/" target="_blank" class="tx-link">MNIST 데이터 셋</a>을 사용할 것 입니다. 이는 정확한 분석결과와 함께 손으로 쓰인 수만개의 숫자들을 스캔한 이미지를 가지고 있습니다. MNIST의 이름은 <a href="https://en.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology" target="_blank" class="tx-link">NIST</a>에 의해 수집된 두개의 데이터 셋을 수정한 별도의 셋이라는 사실로 부터 지어졌습니다. NIST는 United States' National Institute of Standards and Technology의 약자 입니다. 아래 사진은 MNIST로 부터 가져온 몇장의 사진 입니다.
 
-<center><img src="http://cfile4.uf.tistory.com/image/2411BC4958EB9FC90AB8B5" style="max-width:100%;height:auto"  height="99" width="630"/></center>
+<center><img src="/assets/neuralnet/digits_separate.png" style="max-width:100%;height:auto"  height="99" width="630"/></center>
 
-위에 보이는 것 처럼, 이 숫자들은 사실 <a href="http://neuralnetworksanddeeplearning.com/chap1.html#complete_zero" target="_blank" class="tx-link">이 챕터의 시작</a>에서 보여드린 것과 같은 이미지입니다. 당연히, 우리의 네트워크를 시험할때에는 이 학습 셋에 있지 않은 이미지들을 사용할것입니다!
+위에 보이는 것 처럼, 이 숫자들은 사실 <a href="https://neuralnetworksanddeeplearning.com/chap1.html#complete_zero" target="_blank" class="tx-link">이 챕터의 시작</a>에서 보여드린 것과 같은 이미지입니다. 당연히, 우리의 네트워크를 시험할때에는 이 학습 셋에 있지 않은 이미지들을 사용할것입니다!
 
 <!-- more -->
 
@@ -30,7 +30,7 @@ $$\begin{eqnarray}  C(w,b) \equiv\frac{1}{2n} \sum_x \| y(x) - a\|^2.\tag{6}\end
 
 좋습니다, 우리가 $C(v)$라는 어떤 함수를 최소화 하려고 한다고 가정해 봅시다. 이 함수는 $v=v_{1}, v_{2}...$ 처럼 많은 변수에 대한 그 어떤 함수도 될 수 있습니다. 제가 이 함수가 그 어떤 함수도 될 수 있음을 강조하기 위해 $w$와 $b$를 $v$로 치환하였습니다. 우리는 더 이상 뉴런 네트워크의 맥락에서 생각하지 않을것입니다. $C(v)$를 최소화 하려면 $C$함수를 단지 두개의 변수를 가진 함수로 생각해 보는것이 도움이 되겠군요. 그 두개의 변수를 $v_{1}$와 $v_{2}$라고 부르도록 합시다.
 
-<center><img src="http://cfile7.uf.tistory.com/image/2544224958ECBEE816EDE0" style="max-width:100%;height:auto"  height="612" width="812"/></center>
+<center><img src="/assets/neuralnet/valley.png" style="max-width:100%;height:auto"  height="612" width="812"/></center>
 
 우리가 하고싶은 것은 $C$가 최소인 곳을 찾는 것 입니다. 지금 위 함수에서는 당연히 눈을 돌려 $C$가 최소인곳을 어렵지 않게 찾을 수 있습니다. 제가 너무 간단한 예를 들어드린것 같군요! 일반적인 경우의 함수 $C$는 아마 많은 변수를 가지고 있을겁니다. 그리고 보통은 눈으로 그래프의 최소인곳을 찾기는 아마 불가능할겁니다.
 
@@ -68,7 +68,7 @@ $$\begin{eqnarray} v \rightarrow v' = v -\eta \nabla C\end{eqnarray}$$
 
 요약하자면, 기울기 하강 알고리즘이 작동하는 방법은 기울기 $\nabla C$를 반복적으로 계산하기 위함이며, 계곡의 바닥면으로 "떨어지는" 방향으로 움직이기 위함입니다. 우리는 이것을 이렇게 시각화 할 수 있습니다.
 
-<center><img src="http://cfile8.uf.tistory.com/image/241F474F58EF47C105D102" style="max-width:100%;height:auto"  height="612" width="812"/></center>
+<center><img src="/assets/neuralnet/valley_with_ball.png" style="max-width:100%;height:auto"  height="612" width="812"/></center>
 
 이런 기울기 하강 규칙은 실제 물리 움직임을 재생산 하지는 않음을 알아두세요. 실제 세계에서는 공이 운동량을 가지고 있어서 계곡의 바닥면을 가로질러 가게 합니다. 혹은 계곡의 꼭대기로 올라가게 할 수도 있습니다. 반대로, 우리가 $\Delta v$를 선택하기위한 규칙은 단지 "지금이야, 굴러가!"라고 말할 뿐입니다. 이는 여전히 최소를 찾기위한 좋은 규칙입니다.
 
@@ -131,5 +131,5 @@ $$\begin{eqnarray}   w_k   \rightarrow   w_k' = w_k-\frac{\eta}{m}  \sum_j \frac
 우리는 확률적 기울기 하강 알고리즘을 여론 조사와 같다고 생각 할 수 있습니다. 전체 집단의 기울기를 구하는것 보다는 작은 소집단의 기울기를 구하는것이 훨씬 쉽습니다. 전체 투표율을 조사하는것 보다는 여론을 조사하는것이 훨씬 쉬운것과 같은 이치죠. 예를 들면 MNIST 처럼 $n=60,000$의 크기를 가지는 학습데이터를 가지고 있고 $m=10$의 크기를 가지는 소집단 을 고르면, 이는 $6,000$배가 빨리 기울기를 구할 수 있다는것을 의미합니다! 물론, 구한 값이 매우 정확치는 않겠죠. 통계적 편차가 존재할 것입니다. 하지만 완벽한 값을 구할 필요가 없습니다. 우리가 하고자 하는것은 전체 $C$의 값을 감소시키는 일반적인 방향을 구하고자 하는것이지, 기울기에 대한 정확한 계산을 할 필요는 없다는 겁니다. 실제로, 확률적 기울기 하강 알고리즘은 뉴런 네트워크를 학습시키는데 있어서 매우 강력하고 자주 쓰이는 기술입니다. 그리고 이는 우리가 이 책에서 개발할 여러 학습 기술들의 바탕이 됩니다.
 
 ### 연습
-<ul style="list-style-type: square;"><li>확률적 기울기 하강 알고리즘의 극단적인 버젼은 우리가 소집단의 크기를 1로 사용할 때 입니다. 이 말은, 주어진 학습데이터 $x$에 대해, $w_{k} \rightarrow w_{k}\prime = w_{k} - \eta \partial C_{x}/\partial w_{k}$ 와 $b_{l} \rightarrow b_{l}\prime = b_{l} - \eta \partial C_{x} /\partial b_{l}$라는 식으로 가중치와 바이어스를 업데이트 하는것을 의미합니다. 그리고 나서 다른 학습데이터를 고르고 다시 규칙을 적용합니다. 이를 계속 반복합니다. 이 과정은 online, on-line, 또는 incremental 학습 이라고 알려져 있습니다. online 학습에서, 뉴런 네트워크는 한번에 하나의 학습데이터만을 가지고 학습합니다(사람이 그러한 것 처럼). 소집단의 크기가 20인(가정) 확률적 기울기 하강 알고리즘과 비교해서 이 방법의 장점과 단점이 무엇인지 이야기 해 보세요.</li></ul>마지막으로, 기울기 하강 알고리즘이 처음인 사람들을 가끔 괴롭히는 부분에 대해서 이야기하면서 이 섹션을 마치도록 하겠습니다. 뉴런 네트워크에서 비용 $C$는 가중치와 바이어스들과 같은 많은 변수들에 대한 함수입니다. 이는 매우 고차원의 공간상의 표면을 그린다고 생각할 수 있습니다. 몇몇 사람들은 이런 생각을 합니다: "이봐, 나는 모든 이 추가적인 차원들을 시각적으로 봐야할 필요가 있어!". 그리고 이들은 걱정하기 시작합니다: "나는 5차원은 커녕 4차원도 생각할 수 없어!(또는 5백만...)". 이들이 놓친 실제 뛰어난 수학자들이 가지고 있는 어떤 특별한 능력이 있을까요? 물론, 답은 '아니오'입니다. 대부분의 전문적인 수학자들 또한 4차원을 시각화 하지 못합니다. 대신 그들이 사용하는 꼼수는 무엇이 일어나고 있는지를 표현하는 다른 방법을 개발하는 것 입니다. 이것이 바로 우리가 앞서 했던 것과 정확히 일치합니다: 우리는 $C$를 감소시키기 위해 어떻게 움직여야 하는지 알아내기 위해 $\Delta C$에 대한 수학적 표현을 사용하였습니다. 고차원에서의 상상을 잘 하는 사람들은 서로 다른 많은 기술들을 가지고 있는 그들만의 머릿속 도서관을 가지고 있습니다. 우리의 수학적 꼼수는 단지 하나의 예시입니다. 이러한 기술들은 아마 3차원을 시각화 할때 처럼 우리에게 익숙한 간단함을 가지고 있진 않을겁니다. 하지만 여러분이 이런 기술들을 가지고 있는 여러분만의 도서관을 짓고 나면, 아마 고차원에서의 상상도 손쉽게 할 수 있을겁니다. 저는 여기서 더 자세히 들어가진 않겠지만, 관심이 좀 생겼다면 뛰어난 수학자들이 고차원에서의 상상을 하기 위해 사용하는 몇몇 기술들을 <a href="http://mathoverflow.net/questions/25983/intuitive-crutches-for-higher-dimensional-thinking" target="_blank" class="tx-link">여기서</a> 확인해 볼 수 있습니다. 몇몇 기술들은 꽤 복잡하지만, 대부분은 직관적이고 접근하기 쉽습니다. 그리고 아마 누구라도 마스터 할 수 있을겁니다.
+<ul style="list-style-type: square;"><li>확률적 기울기 하강 알고리즘의 극단적인 버젼은 우리가 소집단의 크기를 1로 사용할 때 입니다. 이 말은, 주어진 학습데이터 $x$에 대해, $w_{k} \rightarrow w_{k}\prime = w_{k} - \eta \partial C_{x}/\partial w_{k}$ 와 $b_{l} \rightarrow b_{l}\prime = b_{l} - \eta \partial C_{x} /\partial b_{l}$라는 식으로 가중치와 바이어스를 업데이트 하는것을 의미합니다. 그리고 나서 다른 학습데이터를 고르고 다시 규칙을 적용합니다. 이를 계속 반복합니다. 이 과정은 online, on-line, 또는 incremental 학습 이라고 알려져 있습니다. online 학습에서, 뉴런 네트워크는 한번에 하나의 학습데이터만을 가지고 학습합니다(사람이 그러한 것 처럼). 소집단의 크기가 20인(가정) 확률적 기울기 하강 알고리즘과 비교해서 이 방법의 장점과 단점이 무엇인지 이야기 해 보세요.</li></ul>마지막으로, 기울기 하강 알고리즘이 처음인 사람들을 가끔 괴롭히는 부분에 대해서 이야기하면서 이 섹션을 마치도록 하겠습니다. 뉴런 네트워크에서 비용 $C$는 가중치와 바이어스들과 같은 많은 변수들에 대한 함수입니다. 이는 매우 고차원의 공간상의 표면을 그린다고 생각할 수 있습니다. 몇몇 사람들은 이런 생각을 합니다: "이봐, 나는 모든 이 추가적인 차원들을 시각적으로 봐야할 필요가 있어!". 그리고 이들은 걱정하기 시작합니다: "나는 5차원은 커녕 4차원도 생각할 수 없어!(또는 5백만...)". 이들이 놓친 실제 뛰어난 수학자들이 가지고 있는 어떤 특별한 능력이 있을까요? 물론, 답은 '아니오'입니다. 대부분의 전문적인 수학자들 또한 4차원을 시각화 하지 못합니다. 대신 그들이 사용하는 꼼수는 무엇이 일어나고 있는지를 표현하는 다른 방법을 개발하는 것 입니다. 이것이 바로 우리가 앞서 했던 것과 정확히 일치합니다: 우리는 $C$를 감소시키기 위해 어떻게 움직여야 하는지 알아내기 위해 $\Delta C$에 대한 수학적 표현을 사용하였습니다. 고차원에서의 상상을 잘 하는 사람들은 서로 다른 많은 기술들을 가지고 있는 그들만의 머릿속 도서관을 가지고 있습니다. 우리의 수학적 꼼수는 단지 하나의 예시입니다. 이러한 기술들은 아마 3차원을 시각화 할때 처럼 우리에게 익숙한 간단함을 가지고 있진 않을겁니다. 하지만 여러분이 이런 기술들을 가지고 있는 여러분만의 도서관을 짓고 나면, 아마 고차원에서의 상상도 손쉽게 할 수 있을겁니다. 저는 여기서 더 자세히 들어가진 않겠지만, 관심이 좀 생겼다면 뛰어난 수학자들이 고차원에서의 상상을 하기 위해 사용하는 몇몇 기술들을 <a href="https://mathoverflow.net/questions/25983/intuitive-crutches-for-higher-dimensional-thinking" target="_blank" class="tx-link">여기서</a> 확인해 볼 수 있습니다. 몇몇 기술들은 꽤 복잡하지만, 대부분은 직관적이고 접근하기 쉽습니다. 그리고 아마 누구라도 마스터 할 수 있을겁니다.
 

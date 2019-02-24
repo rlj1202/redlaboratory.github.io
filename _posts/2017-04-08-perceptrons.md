@@ -6,7 +6,7 @@ categories:
 tags:       NeuralNetworksAndDeepLearning
 ---
 
-뉴런 네트워크란 무엇인가요? 시작하기에 앞서, 저는 퍼셉트론이라고 불리는 가상 뉴런의 한 종류에 대해 설명하고자 합니다. 퍼셉트론은 [워렌 맥클로치](http://en.wikipedia.org/wiki/Warren_McCulloch)와 [월터 피치](http://en.wikipedia.org/wiki/Walter_Pitts)의 [선행 연구](http://scholar.google.ca/scholar?cluster=4035975255085082870)에 영감을 받아 과학자 [프랭크 로젯블랫](http://en.wikipedia.org/wiki/Frank_Rosenblatt)에 의해 1950년과 1960년대 사이에 [개발](http://books.google.ca/books/about/Principles_of_neurodynamics.html?id=7FhRAAAAMAAJ)되었습니다. 오늘날에는 다른 뉴런 모델을 사용하는 것이 일반적입니다. 이 책과 대부분의 현대적 연구에서 사용되는 주된 뉴런 모델은 시그모이드 뉴런 이라고 불리는 뉴런입니다. 곧 시그모이드 뉴런에 대해 다룰것 이지만 왜 시그모이드 뉴런이 왜 그렇게 정의되었는지 알기 위해서는 퍼셉트론을 첫번째로 이해하는 시간을 가지는 것이 좋겠습니다.
+뉴런 네트워크란 무엇인가요? 시작하기에 앞서, 저는 퍼셉트론이라고 불리는 가상 뉴런의 한 종류에 대해 설명하고자 합니다. 퍼셉트론은 [워렌 맥클로치](https://en.wikipedia.org/wiki/Warren_McCulloch)와 [월터 피치](https://en.wikipedia.org/wiki/Walter_Pitts)의 [선행 연구](https://scholar.google.ca/scholar?cluster=4035975255085082870)에 영감을 받아 과학자 [프랭크 로젯블랫](https://en.wikipedia.org/wiki/Frank_Rosenblatt)에 의해 1950년과 1960년대 사이에 [개발](https://books.google.ca/books/about/Principles_of_neurodynamics.html?id=7FhRAAAAMAAJ)되었습니다. 오늘날에는 다른 뉴런 모델을 사용하는 것이 일반적입니다. 이 책과 대부분의 현대적 연구에서 사용되는 주된 뉴런 모델은 시그모이드 뉴런 이라고 불리는 뉴런입니다. 곧 시그모이드 뉴런에 대해 다룰것 이지만 왜 시그모이드 뉴런이 왜 그렇게 정의되었는지 알기 위해서는 퍼셉트론을 첫번째로 이해하는 시간을 가지는 것이 좋겠습니다.
 
 그래서, 퍼셉트론 어떻게 작동할까요? 퍼셉트론은 $x_{1}$, $x_{2}$, ...와 같은 몇개의 이진 입력을 받습니다. 그리고 하나의 이진 출력을 내보냅니다.
 

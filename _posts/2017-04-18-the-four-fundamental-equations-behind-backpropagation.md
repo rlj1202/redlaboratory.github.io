@@ -9,7 +9,7 @@ tags:       NeuralNetworksAndDeepLearning
 
 어떻게 error 가 정의되는지 이해하기 위해서, 우래의 네트워크에 악마가 하나 있다고 상상해 봅시다.
 
-<center><img src="http://cfile21.uf.tistory.com/image/2438BF4D58F5F0D32BC9AA" style="max-width:100%;height:auto"  height="240" width="583"/></center>
+<center><img src="/assets/neuralnet/tikz19.png" style="max-width:100%;height:auto"  height="240" width="583"/></center>
 
 <!-- more -->
 

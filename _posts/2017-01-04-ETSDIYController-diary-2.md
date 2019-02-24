@@ -8,7 +8,7 @@ date: 2017-01-04 00:50:00 +0900
 
 <center><img src="/assets/photo/2017_01_04_00_52_51_967.png" width="400px"></center>
 
-<a href="http://geargenerator.com/" target="_blank" class="tx-link">http://geargenerator.com/</a>
+<a href="https://geargenerator.com/" target="_blank" class="tx-link">https://geargenerator.com/</a>
 
 해당 홈페이지에서 기어 이빨의 수가 5:18의 비율을 다르도록 하여 백터 이미지 파일로 저장하였다.
 원래는 블랜더에서 작업 후 obj로 만들려고 했지만, 블랜더에서 출력한 obj 파일의 사이즈 정보가 제대로 나오지 않는지 3D 큐브 프로그램에서 사이즈를 인식하지 못한다.
@@ -17,7 +17,7 @@ date: 2017-01-04 00:50:00 +0900
 
 <!-- more -->
 
-<a href="http://www.freecadweb.org/" target="_blank" class="tx-link">http://www.freecadweb.org/</a>
+<a href="https://www.freecadweb.org/" target="_blank" class="tx-link">https://www.freecadweb.org/</a>
 <center><img src="/assets/photo/2017_01_03_23_50_04_901.png" width="400px"></center>
 
 백터 이미지를 불러온 뒤 2D 오브젝트를 늘려서 3D로 만들고 6mm 구멍을 낸 결과다.
