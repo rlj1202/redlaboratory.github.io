@@ -107,13 +107,16 @@ article .category {
 	font-weight: normal;
 	float: right;
 }
-article .tag {
+article .tags {
 	clear: both;
+}
+article .tag {
 	float: left;
 
 	background-color: #00000055;
 	border-radius: 2px;
 	padding: 1px 3px;
+	margin-right: 5px;
 }
 article .tag, article .tag a:visited, article .tag a:link {
 	color: #ffffffee;
@@ -141,6 +144,10 @@ section a, section a:link, section a:visited {
 .article-content h1,
 .article-content h2 {
 	margin: 0 0 16px 0;
+	font-weight: bold;
+}
+.article-content h2 {
+	color: #444444;
 }
 a.article-more, a.article-more:link, a.article-more:visited {
 	color: black;
@@ -207,7 +214,8 @@ div#leave_comment textarea, div#leave_comment input {
 	background: rgba(0, 0, 0, 0.15);
 }
 code {
-	font-family: "Nanum Gothic Coding", monospace;
+	/* font-family: "Nanum Gothic Coding", monospace; */
+	font-family: "Consolas", monospace;
 	font-weight: 600;
 }
 .highlighter-rouge {
